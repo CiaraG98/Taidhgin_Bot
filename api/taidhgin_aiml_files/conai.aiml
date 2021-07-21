@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<topic name="CONAITOPIC"> 
+
+
+<category><pattern>I *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>IN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>SA *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>SAN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>AR AN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+<category><pattern> * I *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * IN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * SA *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * SAN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * AR AN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+
+<category><pattern>TÁ MÉ I MO CHÓNAÍ *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>TÁ MUID INÁR GCÓNAÍ *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>TÁIMID INÁR GCÓNAÍ *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+<category><pattern>TÁ CÓNAÍ ORM *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>TÁ CÓNAÍ ORAINN *</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+<category><pattern>IS * ATÁ MÉ</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>IS * ATÁ MUID</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern>IS * ATÁIMID</pattern><template><srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+<category><pattern>I GCONTAE *</pattern><template>Contae álainn! <srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * GCONTAE *</pattern><template>Contae álainn! <srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+<category><pattern> * CONTAE *</pattern><template>Contae álainn! <srai>CÓNAÍ</srai><think> <set name="topic">CONAITOPIC</set> </think></template></category>
+
+
+<category>
+<pattern>CÓNAÍ</pattern>
+<template>
+<random><li>Agus an maith leat an áit ina bhfuil tú i do chónaí?</li><li>Agus céard a cheapann tú den áit ina bhfuil tú?</li><li>Agus, an maith leat í mar áit chónaithe?</li></random>
+<think> <set name="topic">CONAITOPIC</set> </think>
+</template>
+</category>
+
+
+
+<category> <pattern>I MBAILE ÁTHA CLIATH </pattern> <template> I mBaile Átha Cliath! <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think> </template> </category>
+<category> <pattern> * MBAILE ÁTHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think> </template> </category>
+<category> <pattern> MBAILE ÁTHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+<category> <pattern> * MBAILE ÁTHA CLIATH </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+
+
+<category><pattern>BAILE ÁTHA CLIATH</pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+<category><pattern> * BAILE ÁTHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+<category><pattern> BAILE ÁTHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template></category>
+<category><pattern> * BAILE ÁTHA CLIATH </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template></category>
+
+
+<category><pattern>BAILE ATHA CLIATH</pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+<category><pattern> * BAILE ATHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template> </category>
+<category><pattern> BAILE ATHA CLIATH * </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template></category>
+<category><pattern> * BAILE ATHA CLIATH </pattern> <template> <srai>BÁC</srai> <think> <set name="topic"> BACTOPIC </set> </think>  </template></category>
+
+
+
+
+<category>
+<pattern>BÁC</pattern>
+<template>
+<random><li>Cén chuid de Bhaile Átha Cliath? Táimse i gColáiste na Tríonóide!</li><li>Táimse i gColáiste na Tríonóide! An bhfuil tú i bhfad ó lár na cathrach?</li><li>Cén áit i mBaile Átha Cliath? Táimse i lár na cathrach!</li></random>
+<think>
+<set name="topic">BACTOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+<category>
+<pattern>*</pattern>
+<that>AGUS AN MAITH LEAT Í MAR ÁIT CHÓNAITHE</that>
+<template><random><li>Chuala mé go bhfuil spiorad maith pobail ansin! Cén caitheamh aimsire atá agat féin? </li><li>Is ceantar deas é ceart go leor! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Tuigim go maith! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+ 
+
+<category>
+<pattern>*</pattern>
+<that>AGUS AN MAITH LEAT AN ÁIT INA BHFUIL TÚ I DO CHÓNAÍ</that>
+<template><random><li>Chuala mé go bhfuil spiorad maith pobail ansin! Cén caitheamh aimsire atá agat féin? </li><li>Is ceantar deas é ceart go leor! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Is deas an áit é, ceart go leor! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>*</pattern>
+<that>AGUS CÉARD A CHEAPANN TÚ DEN ÁIT INA BHFUIL TÚ</that>
+<template><random><li>Chuala mé go bhfuil spiorad maith pobail ansin! Cén caitheamh aimsire atá agat féin? </li><li>Is ceantar deas é ceart go leor! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Is deas an áit é ceart go leor! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+
+
+<category> 
+<pattern> NÍ MAITH * </pattern>
+<template>
+<random><li>Nach mór an trua é sin! Ní labhróimid faoi anois! Cén caitheamh aimsire atá agat féin? </li><li>Cheapas gur ceantar deas é! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Ní labhróimid faoin gceantar anois mar sin! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+<category> 
+<pattern> NÍ MAITH </pattern>
+<template>
+<random><li>Nach mór an trua é sin! Ní labhróimid faoi anois! Cén caitheamh aimsire atá agat féin? </li><li>Cheapas gur ceantar deas é! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Ní labhróimid faoin gceantar anois mar sin! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+<category> 
+<pattern> * NÍ MAITH </pattern>
+<template>
+<random><li>Nach mór an trua é sin! Ní labhróimid faoi anois! Cén caitheamh aimsire atá agat féin? </li><li>Cheapas gur ceantar deas é! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Ní labhróimid faoin gceantar anois mar sin! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+<category> 
+<pattern> * NÍ MAITH * </pattern>
+<template>
+<random><li>Nach mór an trua é sin! Ní labhróimid faoi anois! Cén caitheamh aimsire atá agat féin? </li><li>Cheapas gur ceantar deas é! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>Ní labhróimid faoin gceantar anois mar sin! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+</topic>
+
+
+
+
+
+</aiml>

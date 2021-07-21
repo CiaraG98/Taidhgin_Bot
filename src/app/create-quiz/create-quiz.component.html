@@ -1,0 +1,43 @@
+<body>
+  <button (click)='test()' type='button' id='test-button'>Test</button>
+  <div id='container'>
+    <div id='quiz-name'><input id='topic-name' type="text" placeholder="Enter Name of Quiz"></div>
+    <div id='questions'>
+      <p>Questions</p>
+      <div class='Q'>1. <input id='q1' placeholder='Insert Question' type="text"></div>
+      <div class='Q'>2. <input id='q2' placeholder='Insert Question' type="text"></div>
+      <div class='Q'>3. <input id='q3' placeholder='Insert Question' type="text"></div>
+      <div class='Q'>4. <input id='q4' placeholder='Insert Question' type="text"></div>
+      <div class='Q'>5. <input id='q5' placeholder='Insert Question' type="text"></div>
+    </div>
+    <div id='answers'>
+      <p>Answers</p>
+      <div class='Q' id='answer-1'>1. <input placeholder='Insert Answer' class='A' id='a1' type="text"><button class='add-A' type="submit" id='add-a1' onclick='addAnswer("answer-1", "add-a1")'>Add Answer</button></div>
+      <div class='Q' id='answer-2'>2. <input placeholder='Insert Answer' class='A' id='a2' type="text"><button class='add-A' type="submit" id='add-a2' onclick='addAnswer("answer-2", "add-a2")'>Add Answer</button></div>
+      <div class='Q' id='answer-3'>3. <input placeholder='Insert Answer' class='A' id='a3' type="text"><button class='add-A' type="submit" id='add-a3' onclick='addAnswer("answer-3", "add-a3")'>Add Answer</button></div>
+      <div class='Q' id='answer-4'>4. <input placeholder='Insert Answer' class='A' id='a4' type="text"><button class='add-A' type="submit" id='add-a4' onclick='addAnswer("answer-4", "add-a4")'>Add Answer</button></div>
+      <div class='Q' id='answer-5'>5. <input placeholder='Insert Answer' class='A' id='a5' type="text"><button class='add-A' type="submit" id='add-a5' onclick='addAnswer("answer-5", "add-a5")'>Add Answer</button></div>
+    </div>
+    <button id='add-question' onclick='addQuestion()'><i class="fas fa-plus-circle"></i> Add Question</button>
+    <div id='remind-message'>message</div>
+    <button id='done' onclick='showVerificationStep()'>Done</button>
+  </div>
+  <div id='submit-container'>
+    <div id='submit-messages'>
+      <div id='save-prompt'>
+        Save your script?
+        <button type='submit' onclick='done()'id='yes-publish'>Yes</button>
+        <button type='submit' onclick='' id='no-publish'>No</button>
+      </div>
+      <div id='thank-message'>Thank you for using the 'make your own script' framwork! 😄</div>
+      <div id='saved-message'>Your script has been saved! You can now use it in Taidhgín under 'Personal Topics'.</div>
+      <div id='ask-publish'>
+        Would you like to publish your script to the An Scealaí community?
+        <button id='yes-publish' onclick='sendVerification()'>Yes</button>
+        <button id='no-publish'>No</button>
+      </div>
+      <button id='ask-download'>Download a copy of you script?</button>
+    </div>
+    <button id='cancel-submit' type='submit' onclick="$('#submit-container').css('top', '-100%')">Close</button>
+  </div>
+</body>

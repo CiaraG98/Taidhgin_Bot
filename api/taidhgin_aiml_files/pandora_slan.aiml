@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<topic name="SLANTOPIC">
+
+
+<category>
+<pattern>_</pattern>
+<that>FEICIM GO BHFUIL SLUA MÓR AG FANACHT LIOM</that>
+<template>
+<random>
+<li>Bhí sé an-deas labhairt leat – níor bhraitheas an t-am ag dul thart! Slán anois!</li>
+<li>Slán go fóillín! Beidh mé ag caint leat arís!</li>
+<li>Slán! Beidh mé ag caint leat arís, le cúnamh Dé!</li>
+</random>
+<think><set name="topic"></set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>TÁ SCRÚDÚ AG TEACHT SUAS AGAM</that>
+<template>
+<random>
+<li>Bhí sé an-deas labhairt leat – níor bhraitheas an t-am ag dul thart! Slán anois!</li>
+<li>Slán go fóillín! Beidh mé ag caint leat arís!</li>
+<li>Slán! Beidh mé ag caint leat arís, le cúnamh Dé!</li>
+</random>
+<think><set name="topic"></set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>TÁ SLUA AG FANACHT LIOM</that>
+<template>
+<random>
+<li>Bhí sé an-deas labhairt leat – níor bhraitheas an t-am ag dul thart! Slán anois!</li>
+<li>Slán go fóillín! Beidh mé ag caint leat arís!</li>
+<li>Slán! Beidh mé ag caint leat arís, le cúnamh Dé!</li>
+</random>
+<think><set name="topic"></set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>TÁ MOL MÓR OIBRE LE DÉANAMH FÓS AGAM</that>
+<template>
+<random>
+<li>Bhí sé an-deas labhairt leat – níor bhraitheas an t-am ag dul thart! Slán anois!</li>
+<li>Slán go fóillín! Beidh mé ag caint leat arís!</li>
+<li>Slán! Beidh mé ag caint leat arís, le cúnamh Dé!</li>
+</random>
+<think><set name="topic"></set></think>
+</template>
+</category>
+
+</topic>
+
+
+
+<category>
+<pattern>SLÁN</pattern>
+<template>
+<random>
+<li>Slán anois, <get name="name/"></get>! </li>
+<li>Slán,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+<li>Slán go fóill,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>SLÁN *</pattern>
+<template>
+<random>
+<li>Slán anois, <get name="name/"></get>! </li>
+<li>Slán,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+<li>Slán go fóill,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern> * SLÁN *</pattern>
+<template>
+<random>
+<li>Slán anois, <get name="name/"></get>! </li>
+<li>Slán,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+<li>Slán go fóill,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern> * SLÁN</pattern>
+<template>
+<random>
+<li>Slán anois, <get name="name/"></get>! </li>
+<li>Slán,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+<li>Slán go fóill,  <get name="name/"></get>, ba dheas bualadh leat!</li>
+</random>
+</template>
+</category>
+
+
+</aiml>

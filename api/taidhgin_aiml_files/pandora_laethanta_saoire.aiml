@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<topic name="LAESAOTOPIC">
+
+<category>
+<pattern>_</pattern>
+<that>AN MAITH LEAT FÉIN TAISTEAL</that>
+<template>Inis dom faoi na laethanta saoire ab fhearr a bhí agat riamh...
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category><pattern>LAECHAITH</pattern><template><random><li>Chaith cara liom tamall ansin freisin agus thaitin sé go mór léi!</li><li>Tá an áit sin an-deas. Tá go leor léite agam faoi! </li><li>Chaith cara liom coicís ansin le gairid agus bhí sí ag rá go raibh an áit go hálainn! </li><li> B'shin tréimhse dheas, déarfainn!</li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>CHAITH *</pattern><template><srai>LAECHAITH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>CHAITHEAMAR *</pattern><template><srai>LAECHAITH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>LAECHUAIGH</pattern><template><random><li>Is breá an rud imeacht mar sin ó am go chéile!</li><li>Rinne cara liom an rud céanna anuraidh! Thaitin an briseadh go mór léi!</li><li>An ndeachaigh? Agus cén fáth ar sheas sé sin amach mar bhriseadh?</li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>CHUAIGH *</pattern><template><srai>LAECHUAIGH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>CHUAMAR *</pattern><template><srai>LAECHUAIGH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>LAEBHÍ</pattern><template><random><li>An raibh? Caithfidh gur bhain tú an-taitneamh as!</li><li>An raibh? Agus an mbeadh fonn ort dul ar ais ansin arís?</li><li>Is dócha go mbeidh tú ag iarraidh dul ar ais ansin arís sar i bhfad? </li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>BHÍ *</pattern><template><srai>LAEBHÍ</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>BHÍOMAR *</pattern><template><srai>LAEBHÍ</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>LAEDIMIGH</pattern><template><random><li>Ar imigh? Agus glacaim leis gur thaitin sé go mór leat? </li><li>Bíonn sé go deas imeacht mar sin anois agus arís! An mbeadh fonn ort dul ar ais?</li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'IMIGH *</pattern><template><srai>LAEDIMIGH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'IMÍOMAR *</pattern><template><srai>LAEDIMIGH</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>LAEDEITIL</pattern><template><random><li>An maith leat a bheith in eitleáin nó an mbraitheann tú neirbhíseach iontu riamh?</li><li>Cén fhad a thóg an turas san eitleán?</li><li>Agus nár dheas an turas é sin? Cén fhad a thóg sé?</li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'EITIL *</pattern><template><srai>LAEDEITIL</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'EITLÍOMAR *</pattern><template><srai>LAEDEITIL</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>LAEDFHAN</pattern><template><random><li>Ar fhan? Caithfidh go raibh sé sin go deas! </li><li>Ar fhan? Déarfainn go raibh sé sin suimiúil? </li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'FHAN *</pattern><template><srai>LAEDFHAN</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+<category><pattern>D'FHANAMAR *</pattern><template><srai>LAEDFHAN</srai><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+<category><pattern>*</pattern><template><random><li>An bhfuil sé ar intinn agat dul ar ais ansin arís?</li><li>Nach deas an rud sos a ghlacadh!</li><li>Is geall le sos malart oibre!</li><li>Ba dheas an briseadh é sin, déarfainn!</li><li>Agus, an raibh grúpa mór agaibh ann?</li><li>Agus cén fáth go bhfanann sé sin i do cheann thar aon turas eile?</li><li>An mbeadh fonn ort dul ar ais?</li></random><think><set name="topic">LAESAOTOPIC</set></think></template></category>
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CHAITH CARA LIOM TAMALL ANSIN FREISIN AGUS THAITIN SÉ GO MÓR LÉI</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>TÁ GO LEOR LÉITE AGAM FAOI</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that> CHAITH CARA LIOM COICÍS ANSIN LE GAIRID AGUS BHÍ SÍ AG RÁ GO RABIH AN ÁIT GO HÁLAINN</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that> B'SHIN TRÉIMHSE DHEAS DÉARFAINN</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>IS BREÁ AN RUD IMEACHT MAR SIN Ó AM GO CHÉILE</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>THAITIN AN BRISEADH GO MÓR LÉI</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>AGUS CÉN FÁTH AR SHEAS SÉ SIN AMACH MAR BHRISEADH</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CAITHFIDH GUR BHAIN TÚ AN-TAITNEAMH AS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN MBEADH FONN ORT DUL AR AIS ANSIN ARÍS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>IS DÓCHA GO MBEIDH TÚ AG IARRAIDH DUL AR AIS ANSIN ARÍS SAR I BHFAD</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AGUS GLACAIM LEIS GUR THAITIN SÉ GO MÓR LEAT</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MBEADH FONN ORT DUL AR AIS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN MAITH LEAT A BHEITH IN EITLEÁIN NÓ AN MBRAITHEANN TÚ NEIRBHÍSEACH IONTU RIAMH</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>CÉN FHAD A THÓG AN TURAS SAN EITLEÁN</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>CÉN FHAD A THÓG SÉ</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CAITHFIDH GO RAIBH SÉ SIN GO DEAS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>DÉARFAINN GO RAIBH SÉ SIN SUIMIÚIL</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL SÉ AR INTINN AGAT DUL AR AIS ANSIN ARÍS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>NACH DEAS AN RUD SOS A GHLACADH</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>IS GEALL LE SOS MALART OIBRE</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>BA DHEAS AN BRISEADH É SIN DÉARFAINN</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN RAIBH GRÚPA MÓR AGAIBH ANN</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AGUS CÉN FÁTH GO BHFANANN SÉ SIN I DO CHEANN THAR AON TURAS EILE</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MBEADH FONN ORT DUL AR AIS</that>
+<template>
+<random>
+<li>Ba bhreá liom féin laethanta saoire a fháil ach...Ó Dia linn is Muire, féach ar an am! Caithfidh mise imeacht anois! Feicim go bhfuil slua mór ag fanacht liom!</li>
+<li>Bheadh sé go deas imeacht ar laethanta saoire anois ach..Ó a Dhia, an bhfuil a fhios agat - caithfidh mise bailiú liom! Tá scrúdú ag teacht suas agam!</li>
+<li>Ní bhfuaireas féin laethanta saoire riamh i mo shaol! Tá brón orm ach caithfidh mise an bóthar a bhualadh anois! Tá slua ag fanacht liom!</li>
+<li>Ó, féach ar an am! An bhfuil a fhios agat, caithfidh mise bailiú liom! Tá mol mór oibre le déanamh fós agam!</li>
+</random>
+<think><set name="topic">SLANTOPIC</set></think>
+</template>
+</category>
+
+
+
+</topic>
+
+</aiml>

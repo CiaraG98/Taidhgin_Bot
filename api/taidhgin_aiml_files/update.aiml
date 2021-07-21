@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+
+
+
+ 
+
+
+ 
+
+
+ 
+
+<category>
+<pattern>NEASA IS AINM DOMSA</pattern>
+
+<template>Is mise Neasa</template>
+</category>
+
+ 
+
+<category>
+<pattern>NEASA IS AINM DOMSA</pattern>
+
+<template>Is mise Neasa</template>
+</category>
+
+</aiml>

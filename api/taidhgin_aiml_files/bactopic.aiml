@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<topic name="BACTOPIC"> 
+
+
+<category>
+<pattern>_</pattern>
+<that>TÁIMSE I GCOLÁISTE NA TRÍONÓIDE</that>
+<template>
+<random><li>Tá cur amach maith agam ar an gceantar sin! Cén caitheamh aimsire atá agat féin? </li><li>Tá an t-ádh leat a bheith i do chónaí ansin! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>An-deas ar fad! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic"> CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL TÚ I BHFAD Ó LÁR NA CATHRACH</that>
+<template>
+<random><li>Tá cur amach maith agam ar an gceantar sin! Cén caitheamh aimsire atá agat féin? </li><li>Tá an t-ádh leat a bheith i do chónaí ansin! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>An-deas ar fad! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic"> CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>TÁIMSE I LÁR NA CATHRACH</that>
+<template>
+<random><li>Tá cur amach maith agam ar an gceantar sin! Cén caitheamh aimsire atá agat féin? </li><li>Tá an t-ádh leat a bheith i do chónaí ansin! Inis dom faoi aon chaitheamh aimsire a bhíonn agat ann? </li><li>An-deas ar fad! Céard a bhíonn agat mar chaitheamh aimsire ann?</li></random>
+<think><set name="topic"> CAITHEAMHTOPIC</set></think>
+</template>
+</category>
+
+
+</topic>
+
+</aiml>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+
+
+
+
+<category><pattern>IS PÁISTE AONAIR MÉ</pattern><template>Caithfidh go bhfuil tú millte mar sin! An gceapann tú go mbíonn buntáistí ag páistí aonair?</template></category>
+<category><pattern>NAID</pattern><template><random><li>Is páiste aonair tú! An gceapann tú go mbíonn buntáistí ag páistí aonair?</li><li> Tá tú leat féin! Caithfidh go bhfuil saol an mhada bháin agat! An gceapann tú go mbíonn buntáistí ag páistí aonair?</li></random></template></category>
+<category><pattern>NÍL AON DEARTHÁIR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIR NÁ DEIRFIÚR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIR NÁ AON DEIRFIÚR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚR NÁ DEARTHÁIR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚR NÁ AON DEARTHÁIR AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>BEIRTT</pattern><template><random><li>Beirt agaibh atá ann! An tusa an duine is sine?</li><li>Níl sa chlann ach an bheirt agaibh! An tusa an duine is sine?</li></random></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN ATÁ AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIR AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGAM AGUS NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN ATÁ AGAM AGUS NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIR AMHÁIN AGUS NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGAM ACH NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN ATÁ AGAM ACH NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIR AMHÁIN ACH NÍL AON DEIRFIÚR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚR AGAM AGUS TÁ DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN ATÁ AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚR AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGAM AGUS NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN ATÁ AGAM AGUS NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚR AMHÁIN AGUS NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGAM ACH NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN ATÁ AGAM ACH NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚR AMHÁIN ACH NÍL AON DEARTHÁIR AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIR AGAM AGUS TÁ DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>GAN DEIRFIÚR</pattern><template>Ó, níl aon deirfiúr agat, buachaillí ar fad atá sa teach leat! Agus, an bhfuil na deartháireacha seo níos óige nó níos sine ná tusa?</template></category>
+
+<category><pattern>TÁ _ DEARTHÁIR AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+
+<category><pattern>* DEARTHÁIR</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+
+
+<category><pattern>NÍL AON DEIRFIÚR AGAM AGUS TÁ _ DEARTHÁIR AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚR AGAM ACH TÁ _ DEARTHÁIR AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGAM AGUS NÍL AON DEIRFIÚR AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGAM ACH NÍL AON DEIRFIÚR AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM ACH TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+
+<category><pattern>GAN DEARTHÁIR</pattern><template>Ó, níl aon deartháir agat, tá tú i measc cailíní! Agus, an bhfuil do chuid deirfiúracha níos óige nó níos sine ná tú?</template></category>
+
+<category><pattern>TÁ _ DEIRFIÚR AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+
+<category><pattern>* DEIRFIÚR</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+
+<category><pattern>NÍL AON DEARTHÁIR AGAM AGUS TÁ _ DEIRFIÚR AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIR AGAM ACH TÁ _ DEIRFIÚR AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGAM AGUS NÍL AON DEARTHÁIR AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGAM ACH NÍL AON DEARTHÁIR AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM ACH TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>SLUA</pattern><template><random><li>Tá slua maith agaibh ann! Cá dtagann tusa sa chlann?</li><li>Sin teaghlach maith! Cá dtagann tusa sa chlann?</li><li>Teaghlach breá mór agaibh! Cá dtagann tú féin sa chlann?</li></random></template></category>
+<category><pattern>_ DEARTHÁIR AGUS _ DEIRFIÚR</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>_ DEARTHÁIR AGUS _ DEIRFIÚR ATÁ AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGUS _ DEIRFIÚR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGUS _ DEARTHÁIR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGUS TÁ _ DEARTHÁIR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGUS TÁ _ DEIRFIÚR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGAM AGUS TÁ _ DEARTHÁIR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AGAM AGUS TÁ _ DEIRFIÚR AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>CEATHRAR PLUS</pattern><template><random><li>Nach bhfuil an t-ádh ort a bheith i dteaghlach deas mar sin! An bhfuil mórán acu níos sine ná tú?</li><li>Nach deas an chlann é sin! An bhfuil mórán acu níos sine ná tusa?</li> <li>Tá comhluadar maith agaibh sa teach mar sin! Agus cá dtagann tusa sa chlann?</li><li>Ó, nach deas an teaghlach é sin! Agus cá dtagann tusa sa chlann?</li></random></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGAM AGUS TÁ _ DEARTHÁIR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGUS _ DEARTHÁIR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGUS TÁ _DEARTHÁIR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN AGUS _ DEARTHÁIR</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGAM AGUS TÁ DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGUS DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>_ DEARTHÁIR AGUS DEIRFIÚR AMHÁIN</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIR AGUS TÁ DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGAM AGUS TÁ _ DEIRFIÚR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGUS _ DEIRFIÚR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGUS TÁ _ DEIRFIÚR AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN AGUS _ DEIRFIÚR</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGAM AGUS TÁ DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGUS DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>_ DEIRFIÚR AGUS DEARTHÁIR AMHÁIN</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚR AGUS TÁ DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TRIÚRR</pattern><template><random><li>Triúr agaibh atá sa chlann! An tusa an duine is óige? </li> <li> Níl ach triúr agaibh sa chlann mar sin! An tusa an duine is óige? </li> <li> Tá triúr agaibh sa chlann mar sin! An tusa an duine is óige? </li></random></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN AGUS DEIRFIÚR AMHÁIN</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN AGUS DEARTHÁIR AMHÁIN </pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGUS DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGUS DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEARTHÁIR AMHÁIN AGAM AGUS TÁ DEIRFIÚR AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEIRFIÚR AMHÁIN AGAM AGUS TÁ DEARTHÁIR AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEARTHÁIR AMHÁIN AGUS DEIRFIÚR AMHÁIN ATÁ AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEIRFIÚR AMHÁIN AGUS DEARTHÁIR AMHÁIN ATÁ AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>LIOSTA</pattern><template>Ach, cé mhéad deartháir agus deirfiúr atá agat go díreach?</template></category>
+<category><pattern>DUINE</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>DUINE AMHÁIN</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>BEIRT</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>TRIÚR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>CEATHRAR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>CÚIGEAR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>SEISEAR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>SEACHTAR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>OCHTAR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>NAONÚR</pattern><template><srai>LIOSTA</srai></template></category>
+<category><pattern>DEICHNIÚR</pattern><template><srai>LIOSTA</srai></template></category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA NÁ DEIRFIÚRACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA NÁ AON DEIRFIÚRACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA NÁ DEARTHÁIREACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA NÁ AON DEARTHÁIREACHA AGAM</pattern><template><srai>NAID</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN ATÁ AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIREACHA AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGAM AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN ATÁ AGAM AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIREACHA AMHÁIN AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGAM ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN ATÁ AGAM ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEARTHÁIREACHA AMHÁIN ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM AGUS TÁ DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN ATÁ AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚRACHA AMHÁIN</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGAM AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN ATÁ AGAM AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚRACHA AMHÁIN AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGAM ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN ATÁ AGAM ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AGAM ACH DEIRFIÚRACHA AMHÁIN ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM AGUS TÁ DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>BEIRTT</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>_ DEARTHÁIREACHA</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>_ DEARTHÁIREACHA ATÁ AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM ACH TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>NÍL AON DEIRFIÚRACHA AGAM ACH TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM AGUS NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM ACH NÍL AON DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEIRFIÚR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>_ DEIRFIÚRACHA</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>_ DEIRFIÚRACHA ATÁ AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM ACH TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>NÍL AON DEARTHÁIREACHA AGAM ACH TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM AGUS NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM ACH NÍL AON DEARTHÁIREACHA AGAM</pattern><template><srai>GAN DEARTHÁIR</srai></template></category>
+<category><pattern>_ DEARTHÁIREACHA AGUS _ DEIRFIÚRACHA</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>_ DEARTHÁIREACHA AGUS _ DEIRFIÚRACHA ATÁ AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGUS _ DEIRFIÚRACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGUS _ DEARTHÁIREACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AGAM AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>SLUA</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGAM AGUS TÁ _ DEARTHÁIREACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGUS _ DEARTHÁIREACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGUS TÁ _DEARTHÁIREACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN AGUS _ DEARTHÁIREACHA</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGAM AGUS TÁ DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGUS DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>_ DEARTHÁIREACHA AGUS DEIRFIÚRACHA AMHÁIN</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEARTHÁIREACHA AGUS TÁ DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGAM AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGUS _ DEIRFIÚRACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGUS TÁ _ DEIRFIÚRACHA AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN AGUS _ DEIRFIÚRACHA</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGAM AGUS TÁ DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGUS DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>_ DEIRFIÚRACHA AGUS DEARTHÁIREACHA AMHÁIN</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>TÁ _ DEIRFIÚRACHA AGUS TÁ DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>CEATHRAR PLUS</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN AGUS DEIRFIÚRACHA AMHÁIN</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN AGUS DEARTHÁIREACHA AMHÁIN </pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGUS DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGUS DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEARTHÁIREACHA AMHÁIN AGAM AGUS TÁ DEIRFIÚRACHA AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>TÁ DEIRFIÚRACHA AMHÁIN AGAM AGUS TÁ DEARTHÁIREACHA AMHÁIN AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEARTHÁIREACHA AMHÁIN AGUS DEIRFIÚRACHA AMHÁIN ATÁ AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+<category><pattern>DEIRFIÚRACHA AMHÁIN AGUS DEARTHÁIREACHA AMHÁIN ATÁ AGAM</pattern><template><srai>TRIÚRR</srai></template></category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN GCEAPANN TÚ GO MBÍONN BUNTÁISTÍ AG PÁISTÍ AONAIR</that>
+<template>Aontaíom leat! Cá bhfuil tú i do chónaí?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>_</pattern>
+<that>AN TUSA AN DUINE IS SINE</that>
+<template>Tá sé sin go deas! Agus, cá bhfuil cónaí ort?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN BHFUIL DO CHUID DEIRFIÚRACHA NÍOS ÓIGE NÓ NÍOS SINE NÁ TÚ</that>
+<template>Tá sé sin go deas! Agus cá bhfuil cónaí ort?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN BHFUIL NA DEARTHÁIREACHA SEO NÍOS ÓIGE NÓ NÍOS SINE NÁ TUSA</that>
+<template>Tá sé sin go deas! Abair liom, cá bhfuil cónaí ort?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+ 
+
+<category>
+<pattern>_</pattern>
+<that>CÁ DTAGANN TÚ FÉIN SA CHLANN</that>
+<template><star index="1"/>! An-deas! Agus, cá bhfuil tú i do chónaí?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CÁ DTAGANN TUSA SA CHLANN</that>
+<template><star index="1"/>! An deas! Agus, cá bhfuil tú i do chónaí?
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AGUS CÁ DTAGANN TUSA SA CHLANN</that>
+<template>
+<random>
+<li><template><star index ="1"/>! An-deas! Abair liom, cá bhfuil tú i do chónaí?</template></li>
+<li>An-deas! Abair liom, cá bhfuil tú i do chónaí?</li>
+</random>
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL MÓRÁN ACU NÍOS SINE NÁ TUSA</that>
+<template>
+<random>
+<li><star index="1"/>! Nach deas é sin! Agus, cá bhfuil tú i do chónaí?</li>
+<li>Nach deas é sin! Agus, cá bhfuil tú i do chónaí?</li>
+</random>
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+
+ 
+<category>
+<pattern>_</pattern>
+<that>AN TUSA AN DUINE IS ÓIGE</that>
+<template>
+<random>
+<li>An-deas! Agus, cá bhfuil tú i do chónaí?</li>
+<li><star index="1"/>! An-deas! Agus, cá bhfuil tú i do chónaí?</li>
+<li>Ceart go leor, tuigim! Agus, cá bhfuil tú i do chónaí?</li>
+</random>
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+
+
+
+ 
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL MÓRÁN ACU NÍOS SINE NÁ TÚ</that>
+<template>
+<random>
+<li><star index="1"/>! Caithfidh go bhfuil sé sin go deas! Agus, cá bhfuil tú i do chónaí?</li>
+<li><star index="1"/>! Nach bhfuil an t-ádh leat! Agus, cá bhfuil tú i do chónaí?</li>
+</random>
+<think>
+<set name="topic">CONAITOPIC</set>
+</think>
+</template>
+</category>
+
+
+</aiml>

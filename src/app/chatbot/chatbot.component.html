@@ -1,0 +1,54 @@
+<body>
+  <!--<button type='submit' onclick='testDNN()'>Test DNN</button>-->
+  <div id='popup-background'></div>
+  <audio id='botaudio' src=''></audio>
+  <video id='chimp' src='./assets/img/chimp_talking.mp4' autoplay loop></video>
+  <div id='new-contents'>
+    <div id='topics'>Choose a Topic</div>
+    <button class='choose-scealai'  onclick="showContents('sc', true)">An Scealaí Topics</button>
+    <button class='choose-personal' onclick="showContents('p', true)">Personal Topics</button>
+    <button class='choose-community' onclick="showContents('c', true)">Community Topics</button>
+  </div>
+  <div class="scealai-topics" id='sc'>
+    <div>An Scealaí Topics</div>
+    <i class="fas fa-times close-topics" onclick='showContents("sc", false)'></i>
+    <button class='contents-button' onclick="load('BriathraNeamhrialta', 'start', 'sc')">Briathra Neamhrialta</button>
+  </div>
+  <div class="personal-topics" id='p'>
+    <div>Personal Topics</div>
+    <i class="fas fa-times close-topics" onclick='showContents("p", false)'></i>
+  </div>
+  <div class="community-topics" id='c'>
+    <div>Community Topics</div>
+    <i class="fas fa-times close-topics" onclick='showContents("c", false)'></i>
+  </div>
+  <div class="bot-bg-modal">
+    <div id='bg-background'></div>
+    <div id="bot-audio">
+      <div id='close-audio' onclick='showContents("bot-audio", false)'>Close</div>
+      <div id='dialects'>
+        <div id='select-HTS' onclick="selectEngine('#select-HTS')">HTS</div>
+        <div id='select-DNN' onclick="selectEngine('#select-DNN')">DNN</div>
+      </div>
+      <button id='dialect-CM' onclick="dialectSelection('dialect-CM')">Connemara (male)</button>
+      <button id='dialect-GD' onclick="dialectSelection('dialect-GD')">Donegal (female)</button>
+      <button id='dialect-MU' onclick="dialectSelection('dialect-MU')">Kerry (female)</button>
+    </div>
+    <div class="audio-checkbox"><input type="checkbox" name="audio" class="audioCheckbox"> Audio Autoplay</div>
+    <div id='this-dialect'>Dialect: no dialect selected</div>
+    <span class='bot-title'>Taidhgín <i class="fa fa-comments"></i></span>
+    <div class="chatlogs">
+      <div id="bot-messages"></div>
+    </div>
+    <form class="chatform">
+      <input id="bot-user_input" type="text" autocomplete="off">
+      <button type="submit" id="bot-message-button" onclick="chatAIML()"><i class="fas fa-arrow-circle-right arrow"></i></button>
+      <button type='submit' id='choose-dialect' onclick="showContents('bot-audio', true)">Choose Dialect</button>
+    </form>
+    </div>
+    <!--
+    <form>
+      <input type='file' id='upload-script'>
+      <input type='submit'>
+    </form>-->
+</body>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<topic name="CAITHEAMHTOPIC"> 
+
+
+
+
+<category><pattern>IMIRT</pattern><template><random><li>An imríonn tú le club áitiúil?</li><li>Cén club lena bhfuil tú?</li><li>An bhfuil foireann mhaith agaibh?</li><li>Cén chaoi a bhfuil ag éirí leat faoi láthair?</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think> </template></category>
+
+<category><pattern>IMRÍONN MÉ *</pattern><template><srai>IMIRT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IMRÍM *</pattern><template><srai>IMIRT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ IMRÍONN MÉ *</pattern><template><srai>IMIRT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ IMRÍM *</pattern><template><srai>IMIRT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IMRÍM CLUICHÍ RÍOMHAIRÍ</pattern><template>Ó, go maith! Is breá liomsa ríomhairí!<think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IMIRT FICHILL</pattern><template>An-suimiúil! Deirtear go ngéaraíonn sé sin d'intinn!<think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IMRÍM FICHILL</pattern><template><srai>IMIRT FICHILL</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IMRÍM TÁPLAIS</pattern><template><srai>IMIRT FICHILL</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>SEINNT</pattern><template><random><li> An mbíonn tú ag seinnt go minic? </li><li>An mbíonn tú ag seinnt leat féin nó an bhfuil grúpa agaibh ann?</li><li>Cén saghas ceoil is fearr leat?</li><li>An-deas! Níl aon rud níos deise ná é!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>SEINNIM *</pattern><template><srai>SEINNT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ SEINNIM *</pattern><template><srai>SEINNT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>SEINNEANN MÉ *</pattern><template><srai>SEINNT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ SEINNEANN MÉ *</pattern><template><srai>SEINNT</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>LÉAMH</pattern><template><random><li>Is breá liomsa léitheoireacht! Is ag léamh a bhím formhór mo chuid ama!</li><li>Ba cheart duit clárú le <formal> Club Leabhar </formal> ar an ríomhaire. Léann na baill leabhair agus pléann siad iad gach mí!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>LÉIM *</pattern><template><srai>LÉAMH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>LÉANN MÉ *</pattern><template><srai>LÉAMH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>LÉANN MÉ</pattern><template><srai>LÉAMH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>TÉIGH</pattern><template><random><li>An dtéann? Agus an dtaitníonn sé sin leat?</li><li>An dtéann? Ó nach méanar duit!</li><li>An mar sin é?</li><li>An minic a théann tú ann?</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>TÉIM *</pattern><template><srai>TÉIGH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>TÉANN MÉ * </pattern><template><srai>TÉIGH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ TÉIM *</pattern><template><srai>TÉIGH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ TÉANN MÉ * </pattern><template><srai>TÉIGH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>ÉIST</pattern><template><random><li>An bhfuil iPod nó a leithéid agat?</li><li>An mbíonn na cluasáin ort go han-mhinic?</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>ÉISTIM *</pattern><template><srai>ÉIST</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>ÉISTEANN MÉ *</pattern><template><srai>ÉIST</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>FÉACH</pattern><template><random><li>An bhféachann anois?</li><li>An gcaitheann tú mórán ama ag féachaint air sin?</li><li>Féachaimse féin ar an nuacht gach tráthnóna.</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>FÉACHAIM *</pattern><template><srai>FÉACH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>_ FÉACHAIM *</pattern><template><srai>FÉACH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>FÉACHANN MÉ *</pattern><template><srai>FÉACH</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>TO BE</pattern><template><random><li>An mbíonn? An gcaitheann tú mórán ama leis?</li><li>An mbíonn tú? Agus an dtaitníonn sé leat?</li><li>An mbíonn? Nach breá an caitheamh aimsire é sin!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template></category>
+
+<category><pattern>BÍM *</pattern><template><srai>TO BE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>BÍONN MÉ *</pattern><template><srai>TO BE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>LIKE</pattern><template><random><li>An mar sin é? Nach breá an caitheamh aimsire é sin!</li><li>Caithfidh mé a rá gur maith liomsa é freisin!</li><li>Is breá liomsa é sin freisin!</li><li>An maith? Tá cairde agamsa atá an-tógtha leis sin freisin!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>IS MAITH LIOM *</pattern><template><srai>LIKE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>GAN CAITHEAMH AIMSIRE</pattern><template><random><li>B'fhearr duit rud éigin a dhéanamh! Ní fiú a bheith ag obair an t-am ar fad!</li><li>B'fhiú duit triail a bhaint as caitheamh aimsire éigin!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think>
+</template></category>
+
+<category><pattern>NÍL AON CHAITHEAMH AIMSIRE AGAM</pattern><template><srai>GAN CAITHEAMH AIMSIRE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>NÍL CAITHEAMH AIMSIRE AGAM</pattern><template><srai>GAN CAITHEAMH AIMSIRE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>NÍ MAITH LIOM CAITHEAMH AIMSIRE</pattern><template><srai>GAN CAITHEAMH AIMSIRE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>NÍL CAITHEAMH AIMSIRE *</pattern><template><srai>GAN CAITHEAMH AIMSIRE</srai><think><set name="topic">CAITHEAMHTOPIC</set></think></template></category>
+
+<category><pattern>*</pattern><template><random><li>Tá sé sin suimiúil! Cuirimse féin spéis ann freisin!</li><li>Nach é sin is fearr fad a bhíonn tú ar do shuaimhneas leis!</li><li>Táim féin ar nós tusa!</li><li>Ó nach breá an caitheamh aimsire é sin!</li><li>An bhfuil tú go maith aige?</li><li>An mbaineann tú taitneamh as sin?</li><li>Agus an maith leat é?</li><li>Nach deas é sin!</li></random><think><set name="topic">CAITHEAMHTOPIC</set></think> </template></category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN IMRÍONN TÚ LE CLUB ÁITIÚIL</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>CÉN CLUB LENA BHFUIL TÚ</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL FOIREANN MHAITH AGAIBH</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>CÉN CHAOI A BHFUIL AG ÉIRÍ LEAT FAOI LÁTHAIR</that>
+<template>Lean leis! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>IS BREÁ LIOMSA RÍOMHAIRÍ</that>
+<template>An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>DEIRTEAR GO NGÉARAÍONN SÉ SIN D'INTINN</that>
+<template>An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN MBÍONN TÚ AG SEINNT GO MINIC</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MBÍONN TÚ AG SEINNT LEAT FÉIN NÓ AN BHFUIL GRÚPA AGAIBH ANN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>CÉN SAGHAS CEOIL IS FEARR LEAT</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>NÍL AON RUD NÍOS DEISE NÁ É</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>IS AG LÉAMH A BHÍM FORMHÓR MO CHUID AMA</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>LÉANN NA BAILL LEABHAIR AGUS PLÉANN SIAD IAD GACH MÍ</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN DTAITNÍONN SÉ SIN LEAT</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>Ó NACH MÉANAR DUIT</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MAR SIN É</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MINIC A THÉANN TÚ ANN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL IPOD NÓ A LEITHÉID AGAT</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MBÍONN NA CLUASÁIN ORT GO HAN-MHINIC</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFÉACHANN ANOIS</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN GCAITHEANN TÚ MÓRÁN AMA AG FÉACHAINT AIR SIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>FÉACHAIMSE FÉIN AR AN NUACHT GACH TRÁTHNÓNA</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>AN GCAITHEANN TÚ MÓRÁN AMA LEIS</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN DTAITNÍONN SÉ LEAT</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>NACH BREÁ AN CAITHEAMH AIMSIRE É SIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CAITHFIDH MÉ A RÁ GUR MAITH LIOMSA É FREISIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>TÁ CAIRDE AGAMSA ATÁ AN-TÓGTHA LEIS SIN FREISIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>NÍ FIÚ A BHEITH AG OBAIR AN T-AM AR FAD</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>B'FHIÚ DUIT TRIAIL A BHAINT AS CAITHEAMH AIMSIRE ÉIGIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic"> LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+
+
+
+<category>
+<pattern>_</pattern>
+<that>CUIRIMSE FÉIN SPÉIS ANN FREISIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>NACH É SIN IS FEARR FAD A BHÍONN TÚ AR DO SHUAIMHNEAS LEIS</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>TÁIM FÉIN AR NÓS TUSA</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>Ó NACH BREÁ AN CAITHEAMH AIMSIRE É SIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+<category>
+<pattern>_</pattern>
+<that>AN BHFUIL TÚ GO MAITH AIGE</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AN MBAINEANN TÚ TAITNEAMH AS SIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>AGUS AN MAITH LEAT É</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+<category>
+<pattern>_</pattern>
+<that>NACH DEAS É SIN</that>
+<template>Tá sé sin suimiúil! An bhfuil a fhios agat, níl aon rud is fearr liomsa ná taisteal! An maith leat féin taisteal?
+<think><set name="topic">LAESAOTOPIC</set></think>
+</template>
+</category>
+
+
+
+
+
+
+</topic>
+
+
+</aiml>

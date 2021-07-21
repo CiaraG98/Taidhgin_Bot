@@ -1,0 +1,49 @@
+<body>
+  <div id='new-contents'>
+    <div id='topics'>Topics</div>
+    <button id='contents-1'>Foclóir</button>
+    <button id='contents-2' onclick='showWordsInput()'>Vocab Test</button>
+    <button id='contents-3'>Dathanna</button>
+    <button id='contents-4'>Topic 4</button>
+  </div>
+  <div class="bot-audio">
+    <audio id='botaudio' src=''></audio>
+    <div id='select-dialect'>Please select a dialect for Taidghín:</div>
+    <button id='dialect-CM' onclick="dialectSelection('dialect-CM')">Connemara (male)</button>
+    <button id='dialect-GD' onclick="dialectSelection('dialect-GD')">Donegal (female)</button>
+    <button id='dialect-MU' onclick="dialectSelection('dialect-MU')">Kerry (female)</button>
+    <div class="audio-checkbox"><input type="checkbox" name="audio" class="audioCheckbox" checked> Audio Autoplay</div>
+    <button id='pause-audio'>Pause</button>
+    <button id='play-audio'>Play</button>
+  </div>
+  <div class="bot-bg-modal">
+    <div class='bot-title'>Trialacha Taidghín Bunscoil <i class="fa fa-comments"></i></div>
+    <div class="chatlogs">
+      <div id="bot-messages"></div>
+    </div>
+    <form class="chatform">
+      <input id="bot-user_input" type="text" autocomplete="off">
+      <button type="submit" id="bot-message-button" onclick="chat()"><i class="fas fa-arrow-circle-right arrow"></i></button>
+    </form>
+    </div>
+    <div class="inputVocab">
+      <p id='input-title'>Input Words</p>
+      <span class="closeWords" onclick="closeWords()"><i class="far fa-window-close"></i></span>
+      <div id='words'>
+        <input class="word" id="word1" type="text" autocomplete="off" placeholder="Word 1">
+        <input class="word" id="word2" type="text" autocomplete="off" placeholder="Word 2">
+        <input class="word" id="word3" type="text" autocomplete="off" placeholder="Word 3">
+        <input class="word" id="word4" type="text" autocomplete="off" placeholder="Word 4">
+        <input class="word" id="word5" type="text" autocomplete="off" placeholder="Word 5">
+        <input class="word" id="word6" type="text" autocomplete="off" placeholder="Word 6">
+        <input class="word" id="word7" type="text" autocomplete="off" placeholder="Word 7">
+        <input class="word" id="word8" type="text" autocomplete="off" placeholder="Word 8">
+        <input class="word" id="word9" type="text" autocomplete="off" placeholder="Word 9">
+        <input class="word" id="word10" type="text" autocomplete="off" placeholder="Word 10">
+      </div>
+      <span class="warning">Please input 10 words</span>
+      <button id="vocabNext" type="submit" onclick="enterWords()">Next</button>
+    </div>
+    <div class="vocabOuter"></div>
+</body>
+

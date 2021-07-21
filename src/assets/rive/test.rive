@@ -1,0 +1,13 @@
++ start
+- What is the capital of Ireland?
+
++ *
+% what is the capital of ireland
+- Nope!
+
++ (dublin)
+% what is the capital of ireland
+- Correct!
+
++ *
+- Hey!

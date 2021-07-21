@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<category>
+<pattern>TÁIM *</pattern>
+<template><srai>TÁ MÉ<star/></srai></template>
+</category>
+
+<category>
+<pattern>TAIM *</pattern>
+<template><srai>TÁ MÉ<star/></srai></template>
+</category>
+
+<category>
+<pattern>NÍLIM *</pattern>
+<template><srai>NÍL MÉ<star/></srai></template>
+</category>
+
+<category>
+<pattern>NIL MÉ *</pattern>
+<template><srai>NÍL MÉ<star/></srai></template>
+</category>
+
+<category>
+<pattern>BÍM *</pattern>
+<template><srai>BÍONN MÉ<star/></srai></template>
+</category>
+
+
+
+<category>
+<pattern> DIA DUIT
+</pattern>
+<template> Dia is Muire duit, Cén chaoi a bhfuil tú?
+<think> <set name="topic">CONASTATU</set> </think>
+</template>
+</category>
+
+<category>
+<pattern>BAIL Ó DHIA ORT
+</pattern>
+<template>Go mba hé duit, Cén chaoi a bhfuil tú?
+<think> <set name="topic">CONASTATU</set> </think>
+</template>
+</category>
+
+<category>
+<pattern>DIA IS MUIRE DUIT
+</pattern>
+<template>Dia ia Muire duit is Pádraig! Cén chaoi a bhfuil tú?</template>
+<think> <set name="topic">CONASTATU</set> </think>
+</category>
+
+
+
+<category><pattern>DIA DHUIT</pattern><template><srai>DIA DUIT</srai></template></category>
+
+<category><pattern>HI</pattern><template><srai>DIA DUIT</srai></template></category>
+
+<category><pattern>HELLO</pattern><template><srai>DIA DUIT</srai></template></category>
+
+<category><pattern>MAIDIN MHAITH</pattern><template><srai>DIA DUIT</srai></template></category>
+
+<category><pattern>HOWAYA</pattern><template><srai>DIA DUIT</srai></template></category>
+
+
+
+
+
+<topic name="CONASTATU"> 
+
+
+<category> 
+<pattern> NÍL MÉ GO MAITH </pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá súil agam go mbeidh tú níos fearr gan mhoill! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> * NÍL MÉ GO MAITH </pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá súil agam go mbeidh tú níos fearr gan mhoill! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> * NÍL MÉ GO MAITH * </pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá súil agam go mbeidh tú níos fearr gan mhoill! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> NÍL MÉ GO MAITH * </pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá súil agam go mbeidh tú níos fearr gan mhoill! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> * MAITH *</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> MAITH *</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> MAITH</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> * MAITH</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+
+
+<category>
+<pattern> * CEART GO LEOR *
+</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+<random>
+<li>Tá sé sin go maith! Cén t-ainm atá ort?</li>
+<li>Tá sé sin go maith! Cad is ainm duit?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern> CEART GO LEOR *
+</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+<random>
+<li>Tá sé sin go maith! Cén t-ainm atá ort?</li>
+<li>Tá sé sin go maith! Cad is ainm duit?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>CEART GO LEOR
+</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+<random>
+<li>Tá sé sin go maith! Cén t-ainm atá ort?</li>
+<li>Tá sé sin go maith! Cad is ainm duit?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>* CEART GO LEOR
+</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+<random>
+<li>Tá sé sin go maith! Cén t-ainm atá ort?</li>
+<li>Tá sé sin go maith! Cad is ainm duit?</li>
+</random>
+</template>
+</category>
+
+
+<category> 
+<pattern> * GO BREÁ *</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> GO BREÁ *</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> GO BREÁ</pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+<category> 
+<pattern> * GO BREÁ </pattern>
+<template>
+<think>
+<set name="topic"></set>
+</think>
+Tá sé sin go maith! Cén t-ainm atá ort?
+</template>
+</category>
+
+
+
+
+
+</topic>
+
+
+
+<category>
+<pattern>IS MISE *
+</pattern>
+<template>
+Deas bualadh leat, <set name="name/"><star/></set>! <random> <li> Cén aois atá tusa? </li><li> Cén aois tú?</li><li>Cén aois atá agat?</li><li>Cén aois atá tú?</li></random>
+</template>
+</category>
+
+<category>
+<pattern>_ IS AINM DOM
+</pattern>
+<template>
+Deas bualadh leat, <set name="name/"><star/></set>! <random> <li> Cén aois atá tusa? </li><li> Cén aois tú?</li><li>Cén aois atá agat?</li><li>Cén aois atá tú?</li></random>
+</template>
+</category>
+
+<category>
+<pattern>_ AN T-AINM ATÁ ORM
+</pattern>
+<template>
+Deas bualadh leat, <set name="name/"><star/></set>! <random> <li> Cén aois atá tusa? </li><li> Cén aois tú?</li><li>Cén aois atá agat?</li><li>Cén aois atá tú?</li></random>
+</template>
+</category>
+
+
+<category>
+<pattern>*</pattern>
+<that>CAD IS AINM DUIT</that>
+<template>
+Deas bualadh leat, <set name="name/"><star/></set>! <random> <li> Cén aois atá tusa? </li><li> Cén aois tú?</li><li>Cén aois atá agat?</li><li>Cén aois atá tú?</li></random>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>*</pattern>
+<that>CÉN T AINM ATÁ ORT</that>
+<template>
+Deas bualadh leat, <set name="name/"><star/></set>! <random> <li> Cén aois atá tusa? </li><li> Cén aois tú?</li><li>Cén aois atá agat?</li><li>Cén aois atá tú?</li></random>
+</template>
+</category>
+
+
+</aiml>

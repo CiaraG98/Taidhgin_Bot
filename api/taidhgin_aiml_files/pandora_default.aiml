@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+
+<category>
+<pattern>*</pattern>
+<template>
+<random>
+<li>An mar sin é!</li>
+
+<li>Ní thuigim i gceart tú <get name="name/"></get>!</li>
+
+<li>Tá lúb éigin ar lár! Éist, cé mhéad deartháir agus deirfiúr atá agat?</li>
+
+<li>Éist liomsa nóiméad, inis dom faoi do theaghlach?</li>
+
+<li>Má cheapann tusa go bhfuil mise chul dul ag caint faoina leithéid sin! Cé mhéad deartháir agus deirfiúr atá agat?</li>
+
+<li>Ní nós domsa a bheith ag caint faoina leithéid sin! Cé mhéad deartháir agus deirfiúr a dúirt tú atá agat?</li>
+
+<li>Tá brón orm, tá tuirse orm inniu, ní thuigim an méid atá á rá agat! Abair liom, cén aois atá tú?</li>
+
+<li>Gabh i leith nóiméad, inis dom,  <get name="name/"></get>, cá bhfuil tú i do chónaí?<think><set name="topic">CONAITOPIC</set></think></li>
+
+<li>Ná bac leis sin nóiméad! Abair liom arís... cá bhfuil tú i do chónaí?<think><set name="topic">CONAITOPIC</set></think></li>
+
+<li>Ní thuigim anois tú ach ba bhreá liom labhairt faoi do chaitheamh aimsire?
+<think><set name="topic">CAITHEAMHTOPIC</set></think></li>
+
+<li>Níor thuigeas é sin anois! Inis dom faoi na laethanta saoire ab fhearr a bhí agat riamh?<think><set name="topic">LAESAOTOPIC</set></think></li>
+
+<li>
+An bhfuil aon cheist agatsa le cur ormsa?
+<think><set name="topic">HUMANASKSTOPIC</set></think>
+</li>
+
+
+</random>
+</template>
+</category>
+</aiml>

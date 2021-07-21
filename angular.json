@@ -1,0 +1,193 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "backup-chatbot": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "aot": true,
+            "outputPath": "dist/backup-chatbot",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [
+              "src/assets/js/bot.js",
+              "src/assets/js/chatbotAudio.js",
+              "src/assets/js/chatbotDb.js",
+              "src/assets/js/Rivescript.js",
+              "src/assets/js/Questions.js",
+              "src/assets/js/framework.js",
+              "src/assets/rive/start.rive",
+              "src/assets/rive/BriathraNeamhrialta.rive",
+              "src/assets/rive/BQuiz.rive",
+              "src/assets/rive/deanAC.rive",
+              "src/assets/rive/deanAL.rive",
+              "src/assets/rive/deanAF.rive",
+              "src/assets/rive/deanMC.rive",
+              "src/assets/rive/beirAC.rive",
+              "src/assets/rive/beirAL.rive",
+              "src/assets/rive/beirAF.rive",
+              "src/assets/rive/beirMC.rive",
+              "src/assets/rive/faighAC.rive",
+              "src/assets/rive/faighAL.rive",
+              "src/assets/rive/faighAF.rive",
+              "src/assets/rive/faighMC.rive",
+              "src/assets/rive/feicAC.rive",
+              "src/assets/rive/feicAL.rive",
+              "src/assets/rive/feicAF.rive",
+              "src/assets/rive/feicMC.rive",
+              "src/assets/rive/abairAC.rive",
+              "src/assets/rive/abairAL.rive",
+              "src/assets/rive/abairAF.rive",
+              "src/assets/rive/abairMC.rive",
+              "src/assets/rive/tabhairAC.rive",
+              "src/assets/rive/tabhairAL.rive",
+              "src/assets/rive/tabhairAF.rive",
+              "src/assets/rive/tabhairMC.rive",
+              "src/assets/rive/tarAC.rive",
+              "src/assets/rive/tarAL.rive",
+              "src/assets/rive/tarAF.rive",
+              "src/assets/rive/tarMC.rive",
+              "src/assets/rive/ithAC.rive",
+              "src/assets/rive/ithAL.rive",
+              "src/assets/rive/ithAF.rive",
+              "src/assets/rive/ithMC.rive",
+              "src/assets/rive/cloisAC.rive",
+              "src/assets/rive/cloisAL.rive",
+              "src/assets/rive/cloisAF.rive",
+              "src/assets/rive/cloisMC.rive",
+              "src/assets/rive/teighAC.rive",
+              "src/assets/rive/teighAL.rive",
+              "src/assets/rive/teighAF.rive",
+              "src/assets/rive/teighMC.rive",
+              "src/assets/rive/biAC.rive",
+              "src/assets/rive/biAL.rive",
+              "src/assets/rive/biAF.rive",
+              "src/assets/rive/biMC.rive"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "backup-chatbot:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "backup-chatbot:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "backup-chatbot:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "backup-chatbot-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "backup-chatbot:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "backup-chatbot:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "backup-chatbot"
+}
