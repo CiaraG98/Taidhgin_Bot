@@ -290,6 +290,21 @@ button:focus, input:focus, audio:focus{
   background-color: #F1C40F;
 }
 
+#send-recording{
+  position: absolute;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  bottom: 5%;
+  left: 28%;
+  font-size: 14px;
+}
+
+#send-recording:hover{
+  font-style: italic;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 500px) and (max-width: 800px){
   .bot-message{
     margin-left: 12%;

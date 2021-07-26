@@ -1,14 +1,15 @@
+//webkitURL is deprecated but nevertheless 
 URL = window.URL || window.webkitURL;
 var gumStream;
+//stream from getUserMedia() 
 var rec;
+//Recorder.js object 
 var input;
-var AudioContext = window.AudioContext || window.webkitAudioContenxt;
+//MediaStreamAudioSourceNode we'll be recording 
+// shim for AudioContext when it's not avb. 
+var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioContext = new AudioContext;
-var recordButton = document.querySelector(".record");
-var stopButton = document.querySelector("#stopRecording");
-if(stopButton) stopButton.disabled = true;
-var recordList = document.querySelector(".recList");
-var thisBlob;
+//new audio context to help us record 
 
 
 var constraints = {
@@ -17,64 +18,74 @@ var constraints = {
 };
 
 function startRecording(){
+  var recordButton = document.getElementById("start-record");
+  var stopButton = document.getElementById("stop-record");
   stopButton.disabled = false;
   recordButton.disabled = true;
-  console.log("recordButton clicked");
+  console.log('recoring clicked');
   navigator.mediaDevices.getUserMedia(constraints).then(function(stream){
-    console.log("getUserMedia() success, stream created, initializing Recorderjs....");
+    console.log("getUserMedia() success, stream created, initializing Recorder.js ..."); 
+    /* assign to gumStream for later use */
     gumStream = stream;
+    /* use the stream */
     input = audioContext.createMediaStreamSource(stream);
+    /* Create the Recorder object and configure to record mono sound (1 channel) Recording 2 channels will double the file size */
     rec = new Recorder(input, {
-      numChannels: 1
-    });
-    rec.record();
+        numChannels: 1
+    }) 
+    //start the recording process 
+    rec.record()
     console.log("Recording started");
+    $('#recording-message').css('display', 'block');
   }).catch(function(err){
-    console.log(err);
+    //enable the record button if getUserMedia() fails 
+    recordButton.disabled = false;
+    stopButton.disabled = true;
   });
 }
 
 function stopRecording() {
+  var recordButton = document.getElementById("start-record");
+  var stopButton = document.getElementById("stop-record");
   console.log("stopButton clicked");
   stopButton.disabled = true;
   recordButton.disabled = false;
   rec.stop(); //stop microphone access
+  $('#recording-message').css('display', 'none');
   gumStream.getAudioTracks()[0].stop();
   rec.exportWAV(createDownloadLink);
 }
-var url;
-function createDownloadLink(blob){
-  thisBlob = blob;
-  console.log(thisBlob);
-  url = URL.createObjectURL(blob);
-  var au = document.createElement("audio");
-  var div = document.createElement("div");
-  var link = document.createElement("a");
-  au.controls  = true;
-  au.src = url;
-  link.href = url;
-  link.download = new Date().toISOString() + ".wav";
-  link.innerHTML = link.download;
-  div.appendChild(au);
-  div.appendChild(link);
 
-  var filename = new Date().toISOString() + ".wav";
-  var upload = document.createElement("button");
-  upload.innerHTML = "upload";
-  upload.addEventListener("click", sendRecording);
-  div.appendChild(upload) //add the upload link to li
-  recordList.appendChild(div);
+function createDownloadLink(blob){
+  var url = URL.createObjectURL(blob);
+  console.log(blob);
+  var au = document.getElementById('recording-player');
+  var link = document.createElement('a');
+  //add controls to the <audio> element 
+  au.src = url;
+  au.style.display = 'block';
+  //link the a element to the blob 
+  link.href = url;
+  link.download = new Date().toISOString() + '.wav';
+  console.log(link);
+  link.innerHTML = link.download;
+  //link.click();
+
+  var send = document.createElement('button');
+  send.setAttribute('id', 'send-recording');
+  send.innerText = 'Send Answer?';
+  send.onclick = function(){
+    sendRecording(blob);
+  }
+  $('#recording-prompt').append(send);
 }
 
-function sendRecording(){
-  event.preventDefault();
+function sendRecording(blob){
   var req = new XMLHttpRequest();
   var form = new FormData();
-  form.append("audio", thisBlob, "RecordedAnswer.wav");
-  console.log(form);
-  req.open("POST", "http://localhost:4000/Chatbot/addAudio", true);
-  req.setRequestHeader("Content-Type", "multipart/form-data");
-  req.send(thisBlob);
+  form.append("file", blob);
+  req.open("POST", "http://localhost:4000/Chatbot/sendRecordedAnswer", true);
+  req.send(form);
   req.onload = function(){
     console.log(this.response);
   };

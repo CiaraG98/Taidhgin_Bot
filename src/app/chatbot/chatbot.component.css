@@ -113,7 +113,7 @@
   padding-left: 10px;
 }
 
-.chatform #bot-message-button, #choose-dialect{
+.chatform #bot-message-button, #choose-dialect, #open-record{
   width: 10%;
   font-size: 15px;
   padding: 7px;
@@ -121,7 +121,7 @@
   border: none;
   border-radius: 8px;
   background-color: #ccc;
-  right: 18%;
+  right: 24%;
   position: absolute;
 }
 
@@ -133,7 +133,12 @@
   background-color: #F5B041;
 }
 
-.chatform #bot-message-button:hover, #choose-dialect:hover{
+#open-record{
+  right: 18%;
+  width: 5%;
+}
+
+.chatform #bot-message-button:hover, #choose-dialect:hover, #record:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.20), 0 17px 50px 0 rgba(0,0,0,0.15);
   cursor: pointer;
 }
@@ -143,7 +148,7 @@
   font-size: 14px;
   border-radius: 8px;
   padding: 5px;
-  width: 70%;
+  width: 64.5%;
   border: none;
 }
 
@@ -264,7 +269,7 @@
 
 
 /*Audio & Dialects*/
-#bot-audio{
+#bot-audio, #recording-prompt{
   position: absolute;
   border-radius: 8px;
   width: 40%;
@@ -277,6 +282,69 @@
   z-index: 5;
   display: none;
   opacity: 0;
+}
+
+#recording-prompt{
+  display: flex;
+  opacity: 1;
+  width: 35%;
+  height: 45%;
+  right: 35%;
+}
+
+#start-record, #stop-record{
+  width: 33%;
+  height: 23%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: small; 
+  position: absolute;
+  left: 12%;
+  top: 25%;
+}
+
+#start-record:hover, #stop-record:hover{
+  cursor: pointer;
+  font-style: italic;
+}
+
+#stop-record{
+  left: 55%;
+}
+
+.fa-circle{
+ color: red;
+}
+
+
+#recording-message{
+  position: absolute;
+  border-radius: 5px;
+  background-color: #CACFD2;
+  bottom: 15%;
+  left: 12%;
+  display: none;
+  padding: 5px;
+  animation: blinker 1.2s linear infinite;
+}
+
+#record-title{
+  position: absolute;
+  left: 17%;
+  font-weight: bold;
+}
+
+#recording-player{
+  position: relative;
+  margin-top: 45%;
+  display: none;
+}
+
+@keyframes blinker{
+  50%{
+    opacity: 0;
+  }
 }
 
 .audio-checkbox, #this-dialect{

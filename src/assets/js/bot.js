@@ -29,7 +29,8 @@ function load(fileId, start, content_id){
     sendInput();
   }
   console.log(send);
-  showContents(content_id, false);
+
+  if(fileId == 'BriathraNeamhrialta') showContents(content_id, false);
   if(currentFile == 'start') $("#bot-messages").empty();
   else currentFile = fileId;
   console.log(fileId);
@@ -88,8 +89,8 @@ function appendMessage(isBot, isUser, text, showButtons){
   newMessage.appendChild(photoDiv);
   newSpan.setAttribute("class", "this-message");
   newSpan.innerHTML = text;
-  newSpan.onclick = function(){
-    manualPlay(newMessage.id);
+  newSpan.ondbclick = function(){
+    //manualPlay(newMessage.id);
   }
   newP.appendChild(newSpan);
 

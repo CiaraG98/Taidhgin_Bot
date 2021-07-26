@@ -1,5 +1,6 @@
 <body>
   <!--<button type='submit' onclick='testDNN()'>Test DNN</button>-->
+  <!--<button id='stop-record' onclick="stopRecording()">Stop</button>-->
   <div id='popup-background'></div>
   <audio id='botaudio' src=''></audio>
   <video id='chimp' src='./assets/img/chimp_talking.mp4' autoplay loop></video>
@@ -34,6 +35,13 @@
       <button id='dialect-GD' onclick="dialectSelection('dialect-GD')">Donegal (female)</button>
       <button id='dialect-MU' onclick="dialectSelection('dialect-MU')">Kerry (female)</button>
     </div>
+    <div id='recording-prompt'>
+      <p id='record-title'>Record you Response</p>
+      <p id='recording-message'>Recording in Progress <i class="fas fa-circle"></i></p>
+      <button type='submit' id='start-record' onclick='startRecording()'>Start Recording</button>
+      <button type='submit' id='stop-record' onclick='stopRecording()' disabled>Stop Recording</button>
+      <audio id='recording-player' src='' controls></audio>
+    </div>
     <div class="audio-checkbox"><input type="checkbox" name="audio" class="audioCheckbox"> Audio Autoplay</div>
     <div id='this-dialect'>Dialect: no dialect selected</div>
     <span class='bot-title'>Taidhgín <i class="fa fa-comments"></i></span>
@@ -42,6 +50,7 @@
     </div>
     <form class="chatform">
       <input id="bot-user_input" type="text" autocomplete="off">
+      <button id='open-record'><i class="fas fa-microphone-alt"></i></button>
       <button type="submit" id="bot-message-button" onclick="chatAIML()"><i class="fas fa-arrow-circle-right arrow"></i></button>
       <button type='submit' id='choose-dialect' onclick="showContents('bot-audio', true)">Choose Dialect</button>
     </form>

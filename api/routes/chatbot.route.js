@@ -17,34 +17,6 @@ let firstLine = "\n\n+ start\n";
 let chatSetup = "> object chatSetup javascript\nif(args[1] == 'nowait') return chatSetup(args[0]);\nsetTimeout(function(){\n" +
   "  return chatSetup(args[0], args[1]);\n}, 2500);\nreturn '';\n< object";
 
-//Google Speech
-const speech = require('@google-cloud/speech');
-const client = new speech.SpeechClient();
-async function quickstart(){
-  // The path to the remote LINEAR16 file
-  const gcsUri = 'gs://cloud-samples-data/speech/brooklyn_bridge.raw';
-
-  // The audio file's encoding, sample rate in hertz, and BCP-47 language code
-  const audio = {
-    uri: gcsUri,
-  };
-  const config = {
-    encoding: 'LINEAR16',
-    sampleRateHertz: 16000,
-    languageCode: 'en-US',
-  };
-  const request = {
-    audio: audio,
-    config: config,
-  };
-
-  // Detects speech in the audio file
-  const [response] = await client.recognize(request);
-  const transcription = response.results
-    .map(result => result.alternatives[0].transcript)
-    .join('\n');
-  console.log(`Transcription: ${transcription}`);
-}
 
 //Create-Quiz Framwork
 //store questions and answers in rive file
@@ -152,6 +124,34 @@ chatbotRoute.route('/getAudio').post(function(req, res){
   } else {
     res.json({status: '404', message: 'Text not found'});
   }
+});
+
+var multer = require('multer');
+var upload = multer();
+const speech = require('@google-cloud/speech');
+const client = new speech.SpeechClient();
+
+chatbotRoute.route('/sendRecordedAnswer').post(upload.single("file"), async function(req, res){
+  let audioBytes = req.file.buffer.toString('base64');
+  // The audio file's encoding, sample rate in hertz, and BCP-47 language code
+  const audio = {
+    content: audioBytes,
+  };
+  const config = {
+    encoding: 'LINEAR16',
+    languageCode: 'en-US',
+  };
+  const request = {
+    audio: audio,
+    config: config,
+  };
+
+  // Detects speech in the audio file
+  const [response] = await client.recognize(request);
+  const transcription = response.results
+    .map(result => result.alternatives[0].transcript)
+    .join('\n');
+  console.log(`Transcription: ${transcription}`);
 });
 
 chatbotRoute.route('/getDNNAudio').post(function(req, res){
