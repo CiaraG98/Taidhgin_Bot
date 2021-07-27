@@ -6,27 +6,27 @@
   <video id='chimp' src='./assets/img/chimp_talking.mp4' autoplay loop></video>
   <div id='new-contents'>
     <div id='topics'>Choose a Topic</div>
-    <button class='choose-scealai'  onclick="showContents('sc', true)">An Scealaí Topics</button>
-    <button class='choose-personal' onclick="showContents('p', true)">Personal Topics</button>
-    <button class='choose-community' onclick="showContents('c', true)">Community Topics</button>
+    <button class='choose-scealai'  onclick="showContents('sc', 'popup-background', true)">An Scealaí Topics</button>
+    <button class='choose-personal' onclick="showContents('p', 'popup-background', true)">Personal Topics</button>
+    <button class='choose-community' onclick="showContents('c', 'popup-background', true)">Community Topics</button>
   </div>
   <div class="scealai-topics" id='sc'>
     <div>An Scealaí Topics</div>
-    <i class="fas fa-times close-topics" onclick='showContents("sc", false)'></i>
+    <i class="fas fa-times close-topics" onclick='showContents("sc", "popup-background", false)'></i>
     <button class='contents-button' onclick="load('BriathraNeamhrialta', 'start', 'sc')">Briathra Neamhrialta</button>
   </div>
   <div class="personal-topics" id='p'>
     <div>Personal Topics</div>
-    <i class="fas fa-times close-topics" onclick='showContents("p", false)'></i>
+    <i class="fas fa-times close-topics" onclick='showContents("p", "popup-background", false)'></i>
   </div>
   <div class="community-topics" id='c'>
     <div>Community Topics</div>
-    <i class="fas fa-times close-topics" onclick='showContents("c", false)'></i>
+    <i class="fas fa-times close-topics" onclick='showContents("c", "popup-background", false)'></i>
   </div>
   <div class="bot-bg-modal">
     <div id='bg-background'></div>
     <div id="bot-audio">
-      <div id='close-audio' onclick='showContents("bot-audio", false)'>Close</div>
+      <div id='close-audio' onclick='showContents("bot-audio", "bg-background", false)'>Close</div>
       <div id='dialects'>
         <div id='select-HTS' onclick="selectEngine('#select-HTS')">HTS</div>
         <div id='select-DNN' onclick="selectEngine('#select-DNN')">DNN</div>
@@ -41,6 +41,7 @@
       <button type='submit' id='start-record' onclick='startRecording()'>Start Recording</button>
       <button type='submit' id='stop-record' onclick='stopRecording()' disabled>Stop Recording</button>
       <audio id='recording-player' src='' controls></audio>
+      <button type='submit' id='cancel-recording' onclick='showContents("recording-prompt", "bg-background", false)'>Cancel</button>
     </div>
     <div class="audio-checkbox"><input type="checkbox" name="audio" class="audioCheckbox"> Audio Autoplay</div>
     <div id='this-dialect'>Dialect: no dialect selected</div>
@@ -50,9 +51,9 @@
     </div>
     <form class="chatform">
       <input id="bot-user_input" type="text" autocomplete="off">
-      <button id='open-record'><i class="fas fa-microphone-alt"></i></button>
       <button type="submit" id="bot-message-button" onclick="chatAIML()"><i class="fas fa-arrow-circle-right arrow"></i></button>
-      <button type='submit' id='choose-dialect' onclick="showContents('bot-audio', true)">Choose Dialect</button>
+      <button id='open-record' type='submit' onclick="showContents('recording-prompt', 'bg-background', true)"><i class="fas fa-microphone-alt"></i></button>
+      <button type='submit' id='choose-dialect' onclick="showContents('bot-audio', 'bg-background', true)">Choose Dialect</button>
     </form>
     </div>
     <!--

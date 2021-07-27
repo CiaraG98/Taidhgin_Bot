@@ -115,7 +115,6 @@ box-shadow: -1px 5px 32px 10px rgba(0,0,0,0.2);
 /* Contents Design */
 #new-contents{
   position: absolute;
-  border-style: dashed;
   border-radius: 8px;
   width: 30%;
   height: 40%;
@@ -123,6 +122,8 @@ box-shadow: -1px 5px 32px 10px rgba(0,0,0,0.2);
   top: 11%;
   padding: 6px;
   font-family: Helvetica;
+  background: #FBFCFC;
+  box-shadow: 1px 1px 1px 0px #ccc;
 }
 
 #topics{
@@ -164,13 +165,14 @@ box-shadow: -1px 5px 32px 10px rgba(0,0,0,0.2);
 /*Audio & Dialects*/
 .bot-audio{
   position: absolute;
-  border-style: dashed;
   border-radius: 8px;
   width: 30%;
   height: 35%;
   right: 7%;
   top: 55%;
   padding: 6px;
+  background: #FBFCFC;
+  box-shadow: 1px 1px 1px 0px #ccc;
 }
 
 .audio-checkbox{

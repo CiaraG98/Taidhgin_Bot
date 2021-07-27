@@ -1,0 +1,49 @@
+> object chatSetup javascript
+if(args[1] == 'nowait') return chatSetup(args[0]);
+setTimeout(function(){
+  return chatSetup(args[0], args[1]);
+}, 2500);
+return '';
+< object
+
++ start
+- Question1
+
++ *
+% question1
+- Nope Wrong! <call>chatSetup</call>
+
++ (Ans11|Ans12)
+% question1
+- Question2
+
++ *
+% question2
+- Nope Wrong! <call>chatSetup</call>
+
++ Ans2
+% question2
+- Question3
+
++ *
+% question3
+- Nope Wrong! <call>chatSetup</call>
+
++ Ans3
+% question3
+- Question4
+
++ *
+% question4
+- Nope Wrong! <call>chatSetup</call>
+
++ Ans4
+% question4
+- last line!- Question5
+
++ *
+% question5
+- Nope Wrong! <call>chatSetup</call>
+
++ Ans5
+% question5

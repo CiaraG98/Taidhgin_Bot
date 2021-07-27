@@ -11,7 +11,7 @@ var currentSpellings;
 let currentFile = '';
 function setup(){
   if(window.location.href == 'http://localhost:4200/taidhgin' || window.location.href == 'http://localhost:4200/bunscoil'){
-    //clearName();
+  //clearName();
     audioPlayer = document.getElementById("botaudio");
     audioCheckbox = document.querySelector(".audioCheckbox");
     bot = new RiveScript({utf8: true});
@@ -30,7 +30,7 @@ function load(fileId, start, content_id){
   }
   console.log(send);
 
-  if(fileId == 'BriathraNeamhrialta') showContents(content_id, false);
+  if(fileId == 'BriathraNeamhrialta') showContents(content_id, 'popup-background', false);
   if(currentFile == 'start') $("#bot-messages").empty();
   else currentFile = fileId;
   console.log(fileId);
@@ -313,15 +313,16 @@ function chatAIML(){
   }
 }
 
-function showContents(content_id, show){
+function showContents(content_id, background_id, show){
   $("form").on("submit", (event) => {
     event.preventDefault();
   });
-  let contentPopup = document.getElementById(content_id);
-  let backgroundPopup = document.getElementById('popup-background');
-  if(content_id == 'bot-audio'){
-    backgroundPopup = document.getElementById('bg-background');
+  if(content_id == 'recording-prompt'){
+    $('#send-recording').css('display', 'none');
+    $('#recording-player').css('display', 'none');
   }
+  let contentPopup = document.getElementById(content_id);
+  let backgroundPopup = document.getElementById(background_id);
   if(show){
     //show contents
     contentPopup.style.display = 'flex';
@@ -340,10 +341,6 @@ function showContents(content_id, show){
       backgroundPopup.style.display = 'none';
     }, 500);
   }
-  
-}
-
-function selectAudio(){
   
 }
 

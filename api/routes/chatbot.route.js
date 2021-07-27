@@ -27,33 +27,32 @@ chatbotRoute.route('/SaveQandA').post(function(req, res){
   delete content['topic-name'];
   console.log(filename);
   console.log(content);
-  fs.appendFile(filename, chatSetup, (err) => {if(err) console.log(err);});
-  fs.appendFile(filename, firstLine, (err) => {if(err) console.log(err);});
+  fs.appendFileSync(filename, chatSetup, (err) => {if(err) console.log(err);});
+  fs.appendFileSync(filename, firstLine, (err) => {if(err) console.log(err);});
   for(var key of Object.keys(content)){
     let trigger = "";
     let line = "- " + key + "\n\n";
 
-    line += "+ *\n% " + key.toLowerCase().replaceAll("[?]", "") + "\n- Nope Wrong! <call>chatSetup</call>\n\n";
+    line += "+ *\n% " + key.toLowerCase().replaceAll("[?]", "") + "\n- Nope Wrong! <call>chatSetup " + content[key] + "</call>\n\n";
 
     if(content[key].length > 1){
       trigger += "(";
       for(let ans of content[key]){
-        trigger += ans + "|"
+        trigger += ans.toLowerCase() + "|"
       }
       trigger = trigger.slice(0, -1);
       trigger += ")";
     }
     else{
-      trigger = content[key];
+      trigger = content[key].toLowerCase();
     }
     line += "+ " + trigger + "\n% " + key.toLowerCase().replaceAll("%3f", "").replaceAll("[?]", "") + "\n";
-    console.log(line);
+    //console.log(line);
     
-    fs.appendFile(filename, line, (err) => {
+    fs.appendFileSync(filename, line, (err) => {
       if(err) throw err;
     });
   }
-  fs.appendFile(filename, '- last line!', (err) => {if(err) console.log(err);});
   res.status(200).send("Success sending questions");
 });
 
