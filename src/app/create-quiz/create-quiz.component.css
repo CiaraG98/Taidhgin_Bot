@@ -141,6 +141,7 @@
     bottom: 18%;
     background: #fff;
     box-shadow: 1px 1px 1px 0px #ccc;
+    white-space: nowrap;
 }
 #questions::-webkit-scrollbar, #answers::-webkit-scrollbar{
     width: 10px;
@@ -187,11 +188,12 @@ button:hover{
 } 
 
 #remind-message{
-    width: 20%;
+    width: 25%;
     position: absolute;
     bottom: 5%;
-    left: 45%;
+    right: 20%;
     display: none;
+    border-style: dashed;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1000px){

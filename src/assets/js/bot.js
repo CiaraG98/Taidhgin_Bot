@@ -89,10 +89,11 @@ function appendMessage(isBot, isUser, text, showButtons){
   newMessage.appendChild(photoDiv);
   newSpan.setAttribute("class", "this-message");
   newSpan.innerHTML = text;
-  newSpan.ondbclick = function(){
-    //manualPlay(newMessage.id);
-  }
   newP.appendChild(newSpan);
+
+  newMessage.ondblclick = function(){
+    manualPlay(newMessage.id);
+  }
 
   if(isAQuestion){
     var dictPopup;

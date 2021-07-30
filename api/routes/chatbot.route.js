@@ -10,10 +10,13 @@ const { parse, stringify } = require('node-html-parser');
 
 // Require Chatbot model in our routes module
 let Models = require('../models/Chatbot');
-let spellings;
+var spellings;
 
 // For writing scripts
+var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+var regex = new RegExp('[' + punctuation + ']', 'g');
 let firstLine = "\n\n+ start\n";
+let lastLine = "\n\n+ finish \n- End of Script!";
 let chatSetup = "> object chatSetup javascript\nif(args[1] == 'nowait') return chatSetup(args[0]);\nsetTimeout(function(){\n" +
   "  return chatSetup(args[0], args[1]);\n}, 2500);\nreturn '';\n< object";
 
@@ -27,32 +30,55 @@ chatbotRoute.route('/SaveQandA').post(function(req, res){
   delete content['topic-name'];
   console.log(filename);
   console.log(content);
-  fs.appendFileSync(filename, chatSetup, (err) => {if(err) console.log(err);});
-  fs.appendFileSync(filename, firstLine, (err) => {if(err) console.log(err);});
+
+  let writetofile = fs.createWriteStream(filename, {flags: 'a'});
+  writetofile.write(chatSetup);
+  writetofile.write(firstLine);
+
+  let keys = Object.keys(content);
+  console.log(keys.indexOf("Question3"));
+
   for(var key of Object.keys(content)){
+    let nextKey = keys[keys.indexOf(key) + 1];
     let trigger = "";
+
+    //- Q1 
     let line = "- " + key + "\n\n";
+    //+ *
+    //% q1
+    //- Nope Wrong <call>chatSetup ans1w</call>
+    line += "+ *\n% " + key.toLowerCase().replace(regex, '');
+    if(nextKey == undefined){
+      line += "\n- Nope Wrong! <call>chatSetup finish</call>\n\n";
+    }
+    else{
+      line += "\n- Nope Wrong! <call>chatSetup " + content[key][0].toLowerCase().replace(regex, '') + "w</call>\n\n";
+    }
 
-    line += "+ *\n% " + key.toLowerCase().replaceAll("[?]", "") + "\n- Nope Wrong! <call>chatSetup " + content[key] + "</call>\n\n";
-
+    if(nextKey != undefined){
+      line += "+ " + content[key][0].toLowerCase().replace(regex, '') + 'w\n';
+      line += "- " + nextKey + '\n\n';
+    }
+    
+    // + Ans1 OR + (Ans1|Ans2)
     if(content[key].length > 1){
       trigger += "(";
       for(let ans of content[key]){
-        trigger += ans.toLowerCase() + "|"
+        trigger += ans.toLowerCase().replace(regex, '') + "|"
       }
       trigger = trigger.slice(0, -1);
       trigger += ")";
     }
     else{
-      trigger = content[key].toLowerCase();
+      trigger = content[key][0].toLowerCase().replace(regex, '');
     }
-    line += "+ " + trigger + "\n% " + key.toLowerCase().replaceAll("%3f", "").replaceAll("[?]", "") + "\n";
-    //console.log(line);
+    // % q1
+    line += "+ " + trigger + "\n% " + key.toLowerCase().replace(regex, '') + "\n";
     
-    fs.appendFileSync(filename, line, (err) => {
-      if(err) throw err;
-    });
+    writetofile.write(line);
   }
+  writetofile.write('- script done');
+  writetofile.write(lastLine);
   res.status(200).send("Success sending questions");
 });
 
@@ -89,15 +115,19 @@ chatbotRoute.route('/getAudio').post(function(req, res){
 
     request({
       headers: {
-        'Host' : 'www.abair.tcd.ie',
+        'Host' : 'www.abair.ie',
         'Content-Length': contentLength,
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      uri: 'https://www.abair.tcd.ie/webreader/synthesis',
+      //uri: 'https://www.abair.tcd.ie/webreader/synthesis',
+      uri: 'https://abair.ie/webreader/synthesis',
       body: formData,
       method: 'POST'
     }, function(err, resp, body){
-      if(err) res.send(err);
+      if(err){
+        console.log("ERROR");
+        res.send(err);
+      } 
       if(body){
         let audioContainer = parse(body.toString()).querySelectorAll('.audio_paragraph');
         let paragraphs = [];
@@ -124,6 +154,7 @@ chatbotRoute.route('/getAudio').post(function(req, res){
     res.json({status: '404', message: 'Text not found'});
   }
 });
+
 
 var multer = require('multer');
 var upload = multer();

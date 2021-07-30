@@ -4,7 +4,7 @@ let numberofquestions = 5;
 let numberofanswers = {"answer-1":1, "answer-2":1, "answer-3":1, "answer-4":1, "answer-5":1};
 
 
-// ADD SOMETHING THAT ALLOWS QUESTIONS TO BE DELETED 
+// ADD SOMETHING THAT ALLOWS ADDED QUESTIONS TO BE DELETED 
 
 function addQuestion(){
   let questionDiv = document.getElementById('questions');
@@ -13,6 +13,7 @@ function addQuestion(){
   let newQ = document.createElement('div');
   let newA = document.createElement('div');
   newQ.setAttribute('class', 'new-Q');
+  newQ.setAttribute('id', 'qdiv' + numberofquestions);
   newA.setAttribute('class', 'new-Q');
   newA.setAttribute('id', 'answer-' + numberofquestions);
   newQ.innerHTML = numberofquestions + '. ';
@@ -26,7 +27,28 @@ function addQuestion(){
   input2.setAttribute('class', 'A');
   input1.setAttribute('placeholder', 'Insert Question');
   input2.setAttribute('placeholder', 'Insert Answer');
+
+  let deletePrompt = document.createElement('button');
+  deletePrompt.setAttribute('class', 'deleteQPrompt');
+  deletePrompt.setAttribute('id', 'dq' + numberofquestions);
+  deletePrompt.innerText = 'X';
+  deletePrompt.style.display = 'none';
+
+  deletePrompt.onclick = function(){
+    console.log(deletePrompt.id);
+    console.log(deletePrompt.id.charAt(2));
+    $('#qdiv' + deletePrompt.id.charAt(2)).remove();
+    $('#answer-' + deletePrompt.id.charAt(2)).remove();
+  }
+
+  input1.onmouseover = function(){
+    deletePrompt.style.display = 'block';
+  };
+
+  input1.oninput = function(){deletePrompt.style.display = 'none';};
+
   newQ.appendChild(input1);
+  newQ.appendChild(deletePrompt);
   newA.appendChild(input2);
 
   let addButton = document.createElement('button');
@@ -41,6 +63,8 @@ function addQuestion(){
   answerDiv.appendChild(newA);
   $("#questions").animate({ scrollTop: $("#questions")[0].scrollHeight }, 200);
   $("#answers").animate({ scrollTop: $("#answers")[0].scrollHeight }, 200);
+
+  numberofanswers['answer-' + numberofquestions] = 1;
 }
 
 function addAnswer(answer_id, button_id){
@@ -54,6 +78,7 @@ function addAnswer(answer_id, button_id){
   newAnswer.setAttribute('id', 'a' + answer_number + numberofanswers[answer_id]);
   newAnswer.setAttribute('placeholder', 'add answer');
   answer.append(newAnswer);
+
   let button = document.createElement('button');
   button.innerText = 'Add Answer';
   button.setAttribute('class', 'add-A');
@@ -61,12 +86,12 @@ function addAnswer(answer_id, button_id){
   button.setAttribute('id', button_id);
   button.onclick = function(){ addAnswer(answer_id, button.id);}
   answer.append(button);
+  
   $("#answers").animate({ scrollLeft: $("#answers")[0].scrollHeight }, 200);
 }
 
 function showVerificationStep(){
   $('#submit-container').css('top', '10%');
-
 }
 
 function done(){
@@ -91,7 +116,7 @@ function done(){
       let nextQuestion = document.getElementById('q' + i);
       let nextAnswer = document.getElementById('a' + i);
       questions.push(nextQuestion.value);
-      answers.push(nextAnswer.value);
+      answers.push([nextAnswer.value]);
     }
   }
   //add additional answers if needed
@@ -109,7 +134,7 @@ function done(){
     var result = {};
     questions.forEach((key, i) => result[key] = answers[i]);
     result["topic-name"] = name;
-    console.log(result);
+    console.log(result);  
     if(name != ''){
       //store questions & answers on the backend to be pulled again from the bot
       request.open('POST', 'http://localhost:4000/Chatbot/SaveQandA', true);
@@ -118,8 +143,8 @@ function done(){
       request.onload = function(){
         console.log(this.response);
         // if file creation was successful
-        $('#saved-message').css('display', 'flex');
-        $('#ask-publish').css('display', 'flex');
+        $('#saved-message').css('display', 'block');
+        $('#ask-publish').css('display', 'block');
         setTimeout(function(){
           //downloadNewScript(name);
         }, 1000);
@@ -150,7 +175,7 @@ function addTopic(name){
 function showReminder(text){
   let reminder = document.getElementById('remind-message');
   reminder.innerText = text;
-  reminder.style.display = 'flex';
+  reminder.style.display = 'block';
 }
 
 function downloadNewScript(filename){

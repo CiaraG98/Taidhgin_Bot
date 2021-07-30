@@ -470,16 +470,45 @@
     top: 3.5%;
     left: -6%;
   }
+  .audio-checkbox{
+    top: 3.7%;
+    font-size: smaller;
+  }
+  #this-dialect{
+    font-size: small;
+    width: 30%;
+    top: 3.7%;
+  }
+  #choose-dialect{
+    font-size: 12px;
+  }
+  #open-record{
+    font-size: small;
+  }
   .contents-button{
     width: 40%;
     left: 5%;
   }
-  #bot-audio, #new-contents{
-    width: 33%;
-    right: 3.5%;
+  #bot-audio{
+    width: 55%;
+    right: 23%;
   }
   #dialect-CM{
-    font-size: 11px;
+    font-size: 13px;
+  }
+  #topics{
+    margin-left: 22%;
+  }
+  .choose-scealai, .choose-personal, .choose-community{
+    width: 50%;
+    height: 20%;
+    left: 23%;
+  }
+  .choose-personal{
+    margin-top: 28%;
+  }
+  .choose-community{
+    margin-top: 52%;
   }
 }
 
@@ -489,27 +518,41 @@
     top: 3%;
     left: -7%;
   }
+  #bot-audio{
+    width: 55%;
+    right: 23%;
+  }
+  .audio-checkbox{
+    top: 3.7%;
+    font-size: smaller;
+  }
+  #this-dialect{
+    font-size: small;
+    width: 30%;
+    top: 3.7%;
+  }
+  #choose-dialect{
+    font-size: 12px;
+  }
+  #open-record{
+    font-size: small;
+  }
   .contents-button{
     width: 40%;
     left: 5%;
   }
-  #bot-audio, #new-contents{
-    width: 33%;
-    right: 3.5%;
+  #topics{
+    margin-left: 20%;
   }
-  #bot-audio{
-    font-size: 14px;
+  .choose-scealai, .choose-personal, .choose-community{
+    width: 50%;
+    height: 20%;
+    left: 23%;
   }
-  #dialect-CM, #dialect-GD, #dialect-MU{
-    font-size: 12px;
-    width: 30%;
-    height: 30%;
-    left: 2%;
+  .choose-personal{
+    margin-top: 33%;
   }
-  #dialect-GD{
-    left: 35%;
-  }
-  #dialect-MU{
-    left: 68%;
+  .choose-community{
+    margin-top: 63%;
   }
 }

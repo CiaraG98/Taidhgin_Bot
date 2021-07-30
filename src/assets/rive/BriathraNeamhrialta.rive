@@ -32,7 +32,7 @@
 < object
 
 + start
-- Tá mé beagnach réidh. <call>chatSetup nom nowait</call>
+- Tá mé beagnach réidh. <call>chatSetup nom</call>
 
 + nom
 * <call>isNameStored</call> == false => <call>chatSetup askname false</call>

@@ -79,7 +79,7 @@ button:focus, input:focus, audio:focus{
   margin-top: 1%;
 }
 
-.bot-message .this-message:hover{
+.message_parent:hover{
   cursor: pointer;
 }
 
@@ -303,6 +303,23 @@ button:focus, input:focus, audio:focus{
 #send-recording:hover{
   font-style: italic;
   cursor: pointer;
+}
+
+.deleteQPrompt, .deleteAPrompt{
+  position: absolute;
+  outline: none;
+  border: none;
+  font-size: small;
+  left: 62.5%;
+  top: 0%;
+}
+
+.deleteAPrompt{
+  margin-left: 27%;
+}
+
+.deleteQPrompt:hover, .deleteAPrompt:hover{
+  background-color: #BDC3C7;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 800px){
