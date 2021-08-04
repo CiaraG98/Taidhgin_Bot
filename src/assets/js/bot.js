@@ -11,7 +11,6 @@ var currentSpellings;
 let currentFile = '';
 function setup(){
   if(window.location.href == 'http://localhost:4200/taidhgin' || window.location.href == 'http://localhost:4200/bunscoil'){
-  //clearName();
     audioPlayer = document.getElementById("botaudio");
     audioCheckbox = document.querySelector(".audioCheckbox");
     bot = new RiveScript({utf8: true});
@@ -81,7 +80,7 @@ function appendMessage(isBot, isUser, text, showButtons){
   else{
     newP.setAttribute("class", "user-message");
     photoDiv.setAttribute("class", "user-message-photo");
-    photo.src = "assets/img/education.png";
+    photo.src = "assets/img/apple-user.svg";
     photo.setAttribute("id", "user-img");
   }
   

@@ -2,7 +2,7 @@
 var request = new XMLHttpRequest();
 let numberofquestions = 5;
 let numberofanswers = {"answer-1":1, "answer-2":1, "answer-3":1, "answer-4":1, "answer-5":1};
-
+var currentFilename = '';
 
 // ADD SOMETHING THAT ALLOWS ADDED QUESTIONS TO BE DELETED 
 
@@ -124,7 +124,9 @@ function done(){
     if(numberofanswers[key] > 1){
       let questionNumber = key.charAt(7);
       for(let i = 2; i <= numberofanswers[key]; i++){
-        answers[questionNumber-1].push(document.getElementById('a' + questionNumber + i).value);
+        if(document.getElementById('a' + questionNumber + i).value != ''){
+          answers[questionNumber-1].push(document.getElementById('a' + questionNumber + i).value);
+        }
       }
     }
   }
@@ -144,10 +146,10 @@ function done(){
         console.log(this.response);
         // if file creation was successful
         $('#saved-message').css('display', 'block');
+        $('#saved-message').text('Your script has been saved! You can now use it in Taidhgín under "Personal Topics".');
         $('#ask-publish').css('display', 'block');
-        setTimeout(function(){
-          //downloadNewScript(name);
-        }, 1000);
+        $('#ask-download').css('display', 'block');
+        currentFilename = name;
       }
     }
     else{
@@ -178,14 +180,15 @@ function showReminder(text){
   reminder.style.display = 'block';
 }
 
-function downloadNewScript(filename){
-  filename = filename + '.rive'
-  var link = document.createElement('a');
-  link.href = '../assets/rive/' + filename;
-  link.download = filename;
-  link.onclick = deleteFile(filename);
-  link.click();
-  link.remove();
+function downloadNewScript(){
+  setTimeout(function(){
+    currentFilename = currentFilename + '.rive'
+    var link = document.createElement('a');
+    link.href = '../assets/rive/' + currentFilename;
+    link.download = currentFilename;
+    link.click();
+    link.remove();
+  }, 500);
 }
 
 function deleteFile(filename){
@@ -197,6 +200,17 @@ function deleteFile(filename){
   request.onload = function(){
     console.log(this.response);
   }
+}
+
+function closeSubmit(){
+  $('#submit-container').css('top', '-100%'); 
+  setTimeout(function(){
+    $('#remind-message').css('display', 'none');
+    $('#saved-message').css('display', 'none');
+    $('#ask-publish').css('display', 'none');
+    $('#ask-download').css('display', 'none');
+  }, 500);
+  
 }
 
 /*

@@ -26,7 +26,8 @@
       <div id='save-prompt'>
         Save your script?
         <button type='submit' onclick='done()'id='yes-publish'>Yes</button>
-        <button type='submit' onclick='' id='no-publish'>No</button>
+        <button type='submit' onclick='$("#saved-message").text("Your script will not be saved. Save it to use with Taidhgín."); 
+        $("#saved-message").css("display", "block")' id='no-publish'>No</button>
       </div>
       <div id='thank-message'>Thank you for using the 'make your own script' framwork! 😄</div>
       <div id='saved-message'>Your script has been saved! You can now use it in Taidhgín under 'Personal Topics'.</div>
@@ -35,9 +36,9 @@
         <button id='yes-publish' onclick='sendVerification()'>Yes</button>
         <button id='no-publish'>No</button>
       </div>
-      <button id='ask-download'>Download a copy of you script?</button>
+      <button id='ask-download' onclick="downloadNewScript()">Download a copy of you script?</button>
       <div id='remind-message'>Fill in all entries</div>
     </div>
-    <button id='cancel-submit' type='submit' onclick="$('#submit-container').css('top', '-100%')">Close</button>
+    <button id='cancel-submit' type='submit' onclick="closeSubmit()">Close</button>
   </div>
 </body>

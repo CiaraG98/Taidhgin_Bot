@@ -36,7 +36,6 @@ chatbotRoute.route('/SaveQandA').post(function(req, res){
   writetofile.write(firstLine);
 
   let keys = Object.keys(content);
-  console.log(keys.indexOf("Question3"));
 
   for(var key of Object.keys(content)){
     let nextKey = keys[keys.indexOf(key) + 1];
