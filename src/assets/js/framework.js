@@ -167,7 +167,14 @@ function done(){
 function sendVerification(){
   //send new script to an scealai email
   $('#saved-message').text('Your script will be verified.');
-  $('#saved-message').css('display', 'flex');
+  $('#saved-message').css('display', 'block');
+  var request = new XMLHttpRequest();
+  request.open('POST', 'http://localhost:4000/Chatbot/sendScriptVerification', true);
+  request.setRequestHeader("Content-type", "application/json");
+  request.send(JSON.stringify({name: currentFilename}));
+  request.onload = function(){
+    console.log(this.response);
+  }
 }
 
 function addTopic(name){

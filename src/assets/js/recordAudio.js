@@ -85,5 +85,10 @@ function sendRecording(blob){
   req.send(form);
   req.onload = function(){
     console.log(this.response);
+    let resp = JSON.parse(this.response);
+    if(resp.status == 200){
+      showContents('recording-prompt', 'bg-background', false);
+      appendMessage(false, true, resp.text);
+    }
   };
 }

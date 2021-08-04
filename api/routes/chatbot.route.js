@@ -7,6 +7,8 @@ const http = require('http');
 const querystring = require('querystring');
 const request = require('request');
 const { parse, stringify } = require('node-html-parser');
+const path = require('path');
+const nodemailer = require('nodemailer');
 
 // Require Chatbot model in our routes module
 let Models = require('../models/Chatbot');
@@ -181,6 +183,12 @@ chatbotRoute.route('/sendRecordedAnswer').post(upload.single("file"), async func
     .map(result => result.alternatives[0].transcript)
     .join('\n');
   console.log(`Transcription: ${transcription}`);
+  if(transcription){
+    res.json({status: 200, text: transcription});
+  }
+  else{
+    res.json({status: 404, error: 'no transcription found'});
+  }
 });
 
 chatbotRoute.route('/getDNNAudio').post(function(req, res){
@@ -220,5 +228,64 @@ chatbotRoute.route('/aiml-message').post(function(req, res){
     console.log("Error: " + err.message);
   });
 });
+
+chatbotRoute.route('/sendScriptVerification').post(function(req, res){  
+  let rive_dir = __dirname.substr(0, __dirname.length-10) + "src\\assets\\rive\\";
+  const mailObj = {
+    from: "gilsenci@tcd.ie",
+    recipients: ["gilsenci@tcd.ie"],
+    subject: 'Taidhgín Script Verification + (user id?)',
+    message: "Attatched is the script to be verified",
+    attatchment: [
+        {
+            filename: req.body.name + '.rive',
+            path: rive_dir + req.body.name + '.rive'
+        }
+    ]
+  };
+  sendEmail(mailObj).then((response) => {
+    console.log(response);
+    if(response){
+      res.send("Email sent");
+    }
+  });
+});
+
+const sendEmail = async (mailObj) => {
+  let dir = __dirname.substr(0, __dirname.length-6);
+  let data = fs.readFileSync(path.join(dir, 'sendinbluekey.json'));
+  let sendinblue_key = JSON.parse(data);
+
+  //code from: https://schadokar.dev/posts/how-to-send-email-in-nodejs/  
+  const {from, recipients, subject, message, attatchment} = mailObj;
+
+  try {
+      // create transporter
+      let transporter = nodemailer.createTransport({
+          host: "smtp-relay.sendinblue.com",
+          port: 587, 
+          auth: {
+              user: sendinblue_key.user,
+              pass: sendinblue_key.pass
+          },
+      });
+
+      //send mail
+      let mailStatus = await transporter.sendMail({
+          from: from, 
+          to: recipients,
+          subject: subject,
+          text: message,
+          attachments: attatchment,
+      });
+      
+      return `Message sent: ${mailStatus.messageId}`;
+  } catch (error) {
+      console.log(error);
+      throw new Error(
+          `Something went wrong in the sendmail method. Error: ${error.message}`
+      );
+  }
+};
 
 module.exports = chatbotRoute;
