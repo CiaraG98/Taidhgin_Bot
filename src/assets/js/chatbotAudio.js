@@ -143,7 +143,8 @@ function testDNN(){
   request.setRequestHeader("Content-type", "application/json");
   request.send(JSON.stringify(messageBubble));
   request.onload = function(){
-    console.log(JSON.parse(this.response));
+    audioPlayer.src = this.response;
+    audioPlayer.play();
   }
 }
 

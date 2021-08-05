@@ -192,8 +192,11 @@ chatbotRoute.route('/sendRecordedAnswer').post(upload.single("file"), async func
 });
 
 chatbotRoute.route('/getDNNAudio').post(function(req, res){
-  let url = 'https://www.abair.tcd.ie/api2/synthesise?input=dia%20dhuit&voice=ga_UL';
-  let voice = 'ga_MU';
+  let input = encodeURIComponent('Dia Dhuit, Is mise Taidhgín. Cad a thabharfaidh mé ort?');
+  let voice = '&voice=' + encodeURIComponent('ga_MU_nnc_nnmnkwii');
+  let speed = '&speed=' + encodeURIComponent(1);
+  let encoding = '&audioEncoding=' + encodeURIComponent('MP3');
+  let url = 'https://www.abair.ie/api2/synthesise?input=' + input + voice + speed + encoding;
   https.get(url, (resp) => {
     let data = '';
     // A chunk of data has been received.
@@ -202,7 +205,11 @@ chatbotRoute.route('/getDNNAudio').post(function(req, res){
     });
     // The whole response has been received. Print out the result.
     resp.on('end', () => {
-      console.log(JSON.parse(data));
+      let thing = JSON.parse(data);
+      const type = 'audio/mp3';
+      const audioURI = 'data:' + type + ';base64,' + thing.audioContent;
+      res.send(audioURI);
+      console.log('done');
     });
   }).on("error", (err) => {
     console.log("Error: " + err.message);
