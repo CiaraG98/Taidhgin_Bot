@@ -100,7 +100,7 @@ chatbotRoute.route('/getWords').get(function(req, res){
   if(spellings != []) res.send(spellings);
 });
 
-chatbotRoute.route('/getAudio').post(function(req, res){
+chatbotRoute.route('/getAudio/').post(function(req, res){
   let bubble = new Models.AudioBubble(req.body);
   console.log(bubble);
   if(bubble.text){

@@ -119,6 +119,7 @@ function editMessageForAudio(){
 }
 
 function callAudio(testString, id){
+  console.log(testString);
   if(currentDialect != ''){
     var messageBubble = {text: testString, dialect: currentDialect};
     request.open('POST', 'http://localhost:4000/Chatbot/getAudio', true);

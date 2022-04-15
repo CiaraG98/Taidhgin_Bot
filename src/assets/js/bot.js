@@ -102,7 +102,7 @@ function appendMessage(isBot, isUser, text, showButtons){
     dictImg = document.createElement("img");
     dictImg.src = "assets/img/dict.png";
     dictImg.setAttribute("class", "dictButton");
-    dictImg.style.display = "flex";
+    dictImg.style.display = "none";
     dictImg.onclick = function(){
       if(dictOn == false){
         dictPopup.style.display = "flex";
